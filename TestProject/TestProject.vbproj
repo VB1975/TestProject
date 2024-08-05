@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmComboBoxesAndListBoxes.Designer.vb">
+      <DependentUpon>FrmComboBoxesAndListBoxes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmComboBoxesAndListBoxes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmLooping.Designer.vb">
       <DependentUpon>FrmLooping.vb</DependentUpon>
     </Compile>
