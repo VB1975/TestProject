@@ -44,4 +44,11 @@
         OpenForm(frm)
 
     End Sub
+
+    Private Sub BtnComboBoxesAndListBoxes_Click(sender As Object, e As EventArgs) Handles BtnComboBoxesAndListBoxes.Click
+
+        Dim frm As New FrmComboBoxesAndListBoxes
+        OpenForm(frm)
+
+    End Sub
 End Class

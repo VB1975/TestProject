@@ -26,6 +26,7 @@ Partial Class FrmMainMenu
         Me.BtnDatesAndTimes = New System.Windows.Forms.Button()
         Me.BtnStrings = New System.Windows.Forms.Button()
         Me.BtnLooping = New System.Windows.Forms.Button()
+        Me.BtnComboBoxesAndListBoxes = New System.Windows.Forms.Button()
         CType(Me.PicMainImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -65,11 +66,21 @@ Partial Class FrmMainMenu
         Me.BtnLooping.Text = "Working with Loops"
         Me.BtnLooping.UseVisualStyleBackColor = True
         '
+        'BtnComboBoxesAndListBoxes
+        '
+        Me.BtnComboBoxesAndListBoxes.Location = New System.Drawing.Point(315, 204)
+        Me.BtnComboBoxesAndListBoxes.Name = "BtnComboBoxesAndListBoxes"
+        Me.BtnComboBoxesAndListBoxes.Size = New System.Drawing.Size(447, 58)
+        Me.BtnComboBoxesAndListBoxes.TabIndex = 4
+        Me.BtnComboBoxesAndListBoxes.Text = "Working with Combo Boxes && List Boxes"
+        Me.BtnComboBoxesAndListBoxes.UseVisualStyleBackColor = True
+        '
         'FrmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(774, 475)
+        Me.Controls.Add(Me.BtnComboBoxesAndListBoxes)
         Me.Controls.Add(Me.BtnLooping)
         Me.Controls.Add(Me.BtnStrings)
         Me.Controls.Add(Me.BtnDatesAndTimes)
@@ -88,4 +99,5 @@ Partial Class FrmMainMenu
     Friend WithEvents BtnDatesAndTimes As Button
     Friend WithEvents BtnStrings As Button
     Friend WithEvents BtnLooping As Button
+    Friend WithEvents BtnComboBoxesAndListBoxes As Button
 End Class
