@@ -370,7 +370,6 @@ Partial Class FrmComboBoxesAndListBoxes
         '
         Me.CboBuffyCharacters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboBuffyCharacters.FormattingEnabled = True
-        Me.CboBuffyCharacters.Items.AddRange(New Object() {"CA", "FL", "MD", "NY", "PA", "TX"})
         Me.CboBuffyCharacters.Location = New System.Drawing.Point(174, 194)
         Me.CboBuffyCharacters.Name = "CboBuffyCharacters"
         Me.CboBuffyCharacters.Size = New System.Drawing.Size(339, 32)

@@ -111,4 +111,59 @@
         End If
 
     End Sub
+
+    Private Sub DisplayMessage()
+
+        Dim State As String = CboState.Text
+        Dim SystemMessage As String
+
+        LblSystemMessage.Text = ""
+        LblSystemMessage.Visible = False
+
+        If State <> "" Then
+            SystemMessage = "You have selected '" & State & "' as your chosen State."
+            LblSystemMessage.Text = SystemMessage
+            LblSystemMessage.Visible = True
+        End If
+
+    End Sub
+
+    Private Sub BtnDisplayMessage_Click(sender As Object, e As EventArgs) Handles BtnDisplayMessage.Click
+
+        DisplayMessage()
+
+    End Sub
+
+    Private Sub CboState_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles CboState.Validating
+
+        Dim State As String = CboState.Text
+
+        If Not String.IsNullOrEmpty(State) AndAlso CboState.FindStringExact(State) = -1 Then
+            If MessageBox.Show(State & " is not in the list. Add it?", "Unknown State",
+                           MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                CboState.Items.Add(State)
+                CboState.SelectedItem = State
+            Else
+                e.Cancel = True
+            End If
+        End If
+
+    End Sub
+
+    Private Sub BtnAddCharacter_Click(sender As Object, e As EventArgs) Handles BtnAddCharacter.Click
+
+        Dim S As String = InputBox("Enter charcter name", "Buffy Character")
+        'characters should be added to a text file or database
+        If Not String.IsNullOrEmpty(S) Then CboBuffyCharacters.Items.Add(S)
+
+    End Sub
+
+    Private Sub BtnRemoveCharacter_Click(sender As Object, e As EventArgs) Handles BtnRemoveCharacter.Click
+
+        If Not String.IsNullOrEmpty(CboBuffyCharacters.Text) Then
+            'characters should be removed from a text file or database
+            CboBuffyCharacters.Items.Remove(CboBuffyCharacters.SelectedItem)
+        End If
+
+    End Sub
 End Class
