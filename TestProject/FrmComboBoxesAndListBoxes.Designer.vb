@@ -23,12 +23,12 @@ Partial Class FrmComboBoxesAndListBoxes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.LstHardware = New System.Windows.Forms.ListBox()
-        Me.LstHardwareSelected = New System.Windows.Forms.ListBox()
-        Me.BtnCopyItem = New System.Windows.Forms.Button()
-        Me.BtnMoveItem = New System.Windows.Forms.Button()
         Me.BtnResetSingleSelectListBoxes = New System.Windows.Forms.Button()
+        Me.BtnMoveItem = New System.Windows.Forms.Button()
+        Me.BtnCopyItem = New System.Windows.Forms.Button()
+        Me.LstHardwareSelected = New System.Windows.Forms.ListBox()
+        Me.LstHardware = New System.Windows.Forms.ListBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.BtnResetMultiSelectListBoxes = New System.Windows.Forms.Button()
         Me.BtnMoveItems = New System.Windows.Forms.Button()
@@ -37,22 +37,22 @@ Partial Class FrmComboBoxesAndListBoxes
         Me.LstSoftware = New System.Windows.Forms.ListBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.LstMagazinesSelected = New System.Windows.Forms.CheckedListBox()
+        Me.LstMagazines = New System.Windows.Forms.CheckedListBox()
         Me.BtnResetCheckedListboxes = New System.Windows.Forms.Button()
         Me.BtnRemoveChecked = New System.Windows.Forms.Button()
         Me.BtnAddChecked = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.LstMagazines = New System.Windows.Forms.CheckedListBox()
-        Me.LstMagazinesSelected = New System.Windows.Forms.CheckedListBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.CboState = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.BtnDisplayMessage = New System.Windows.Forms.Button()
-        Me.LblSystemMessage = New System.Windows.Forms.Label()
+        Me.BtnRemoveCharacter = New System.Windows.Forms.Button()
         Me.BtnAddCharacter = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.CboBuffyCharacters = New System.Windows.Forms.ComboBox()
-        Me.BtnRemoveCharacter = New System.Windows.Forms.Button()
+        Me.LblSystemMessage = New System.Windows.Forms.Label()
+        Me.BtnDisplayMessage = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.CboState = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -73,52 +73,17 @@ Partial Class FrmComboBoxesAndListBoxes
         Me.Panel1.Size = New System.Drawing.Size(518, 313)
         Me.Panel1.TabIndex = 0
         '
-        'Label1
+        'BtnResetSingleSelectListBoxes
         '
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.BtnResetSingleSelectListBoxes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(510, 38)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Single Select List Boxes"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'LstHardware
-        '
-        Me.LstHardware.FormattingEnabled = True
-        Me.LstHardware.ItemHeight = 24
-        Me.LstHardware.Location = New System.Drawing.Point(3, 53)
-        Me.LstHardware.Name = "LstHardware"
-        Me.LstHardware.Size = New System.Drawing.Size(165, 244)
-        Me.LstHardware.Sorted = True
-        Me.LstHardware.TabIndex = 1
-        '
-        'LstHardwareSelected
-        '
-        Me.LstHardwareSelected.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LstHardwareSelected.FormattingEnabled = True
-        Me.LstHardwareSelected.ItemHeight = 24
-        Me.LstHardwareSelected.Location = New System.Drawing.Point(348, 53)
-        Me.LstHardwareSelected.Name = "LstHardwareSelected"
-        Me.LstHardwareSelected.Size = New System.Drawing.Size(165, 244)
-        Me.LstHardwareSelected.Sorted = True
-        Me.LstHardwareSelected.TabIndex = 2
-        '
-        'BtnCopyItem
-        '
-        Me.BtnCopyItem.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCopyItem.ForeColor = System.Drawing.Color.Teal
-        Me.BtnCopyItem.Location = New System.Drawing.Point(192, 102)
-        Me.BtnCopyItem.Name = "BtnCopyItem"
-        Me.BtnCopyItem.Size = New System.Drawing.Size(131, 44)
-        Me.BtnCopyItem.TabIndex = 3
-        Me.BtnCopyItem.Text = "Copy >"
-        Me.BtnCopyItem.UseVisualStyleBackColor = True
+        Me.BtnResetSingleSelectListBoxes.ForeColor = System.Drawing.Color.Blue
+        Me.BtnResetSingleSelectListBoxes.Location = New System.Drawing.Point(192, 202)
+        Me.BtnResetSingleSelectListBoxes.Name = "BtnResetSingleSelectListBoxes"
+        Me.BtnResetSingleSelectListBoxes.Size = New System.Drawing.Size(131, 44)
+        Me.BtnResetSingleSelectListBoxes.TabIndex = 5
+        Me.BtnResetSingleSelectListBoxes.Text = "Reset <>"
+        Me.BtnResetSingleSelectListBoxes.UseVisualStyleBackColor = True
         '
         'BtnMoveItem
         '
@@ -132,17 +97,54 @@ Partial Class FrmComboBoxesAndListBoxes
         Me.BtnMoveItem.Text = "Move >>"
         Me.BtnMoveItem.UseVisualStyleBackColor = True
         '
-        'BtnResetSingleSelectListBoxes
+        'BtnCopyItem
         '
-        Me.BtnResetSingleSelectListBoxes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.BtnCopyItem.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnResetSingleSelectListBoxes.ForeColor = System.Drawing.Color.Blue
-        Me.BtnResetSingleSelectListBoxes.Location = New System.Drawing.Point(192, 202)
-        Me.BtnResetSingleSelectListBoxes.Name = "BtnResetSingleSelectListBoxes"
-        Me.BtnResetSingleSelectListBoxes.Size = New System.Drawing.Size(131, 44)
-        Me.BtnResetSingleSelectListBoxes.TabIndex = 5
-        Me.BtnResetSingleSelectListBoxes.Text = "Reset <>"
-        Me.BtnResetSingleSelectListBoxes.UseVisualStyleBackColor = True
+        Me.BtnCopyItem.ForeColor = System.Drawing.Color.Teal
+        Me.BtnCopyItem.Location = New System.Drawing.Point(192, 102)
+        Me.BtnCopyItem.Name = "BtnCopyItem"
+        Me.BtnCopyItem.Size = New System.Drawing.Size(131, 44)
+        Me.BtnCopyItem.TabIndex = 3
+        Me.BtnCopyItem.Text = "Copy >"
+        Me.BtnCopyItem.UseVisualStyleBackColor = True
+        '
+        'LstHardwareSelected
+        '
+        Me.LstHardwareSelected.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LstHardwareSelected.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LstHardwareSelected.FormattingEnabled = True
+        Me.LstHardwareSelected.ItemHeight = 20
+        Me.LstHardwareSelected.Location = New System.Drawing.Point(348, 53)
+        Me.LstHardwareSelected.Name = "LstHardwareSelected"
+        Me.LstHardwareSelected.Size = New System.Drawing.Size(165, 244)
+        Me.LstHardwareSelected.Sorted = True
+        Me.LstHardwareSelected.TabIndex = 2
+        '
+        'LstHardware
+        '
+        Me.LstHardware.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LstHardware.FormattingEnabled = True
+        Me.LstHardware.ItemHeight = 20
+        Me.LstHardware.Location = New System.Drawing.Point(3, 53)
+        Me.LstHardware.Name = "LstHardware"
+        Me.LstHardware.Size = New System.Drawing.Size(165, 244)
+        Me.LstHardware.Sorted = True
+        Me.LstHardware.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(510, 38)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Single Select List Boxes"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel2
         '
@@ -197,8 +199,9 @@ Partial Class FrmComboBoxesAndListBoxes
         'LstSoftwareSelected
         '
         Me.LstSoftwareSelected.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LstSoftwareSelected.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LstSoftwareSelected.FormattingEnabled = True
-        Me.LstSoftwareSelected.ItemHeight = 24
+        Me.LstSoftwareSelected.ItemHeight = 20
         Me.LstSoftwareSelected.Location = New System.Drawing.Point(348, 53)
         Me.LstSoftwareSelected.Name = "LstSoftwareSelected"
         Me.LstSoftwareSelected.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended
@@ -208,8 +211,9 @@ Partial Class FrmComboBoxesAndListBoxes
         '
         'LstSoftware
         '
+        Me.LstSoftware.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LstSoftware.FormattingEnabled = True
-        Me.LstSoftware.ItemHeight = 24
+        Me.LstSoftware.ItemHeight = 20
         Me.LstSoftware.Location = New System.Drawing.Point(3, 53)
         Me.LstSoftware.Name = "LstSoftware"
         Me.LstSoftware.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended
@@ -244,6 +248,26 @@ Partial Class FrmComboBoxesAndListBoxes
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(518, 313)
         Me.Panel3.TabIndex = 2
+        '
+        'LstMagazinesSelected
+        '
+        Me.LstMagazinesSelected.CheckOnClick = True
+        Me.LstMagazinesSelected.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LstMagazinesSelected.FormattingEnabled = True
+        Me.LstMagazinesSelected.Location = New System.Drawing.Point(348, 53)
+        Me.LstMagazinesSelected.Name = "LstMagazinesSelected"
+        Me.LstMagazinesSelected.Size = New System.Drawing.Size(165, 235)
+        Me.LstMagazinesSelected.TabIndex = 7
+        '
+        'LstMagazines
+        '
+        Me.LstMagazines.CheckOnClick = True
+        Me.LstMagazines.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LstMagazines.FormattingEnabled = True
+        Me.LstMagazines.Location = New System.Drawing.Point(3, 53)
+        Me.LstMagazines.Name = "LstMagazines"
+        Me.LstMagazines.Size = New System.Drawing.Size(165, 235)
+        Me.LstMagazines.TabIndex = 6
         '
         'BtnResetCheckedListboxes
         '
@@ -295,22 +319,6 @@ Partial Class FrmComboBoxesAndListBoxes
         Me.Label3.Text = "Checked List Boxes"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LstMagazines
-        '
-        Me.LstMagazines.FormattingEnabled = True
-        Me.LstMagazines.Location = New System.Drawing.Point(3, 53)
-        Me.LstMagazines.Name = "LstMagazines"
-        Me.LstMagazines.Size = New System.Drawing.Size(165, 244)
-        Me.LstMagazines.TabIndex = 6
-        '
-        'LstMagazinesSelected
-        '
-        Me.LstMagazinesSelected.FormattingEnabled = True
-        Me.LstMagazinesSelected.Location = New System.Drawing.Point(348, 53)
-        Me.LstMagazinesSelected.Name = "LstMagazinesSelected"
-        Me.LstMagazinesSelected.Size = New System.Drawing.Size(165, 244)
-        Me.LstMagazinesSelected.TabIndex = 7
-        '
         'Panel4
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -328,57 +336,15 @@ Partial Class FrmComboBoxesAndListBoxes
         Me.Panel4.Size = New System.Drawing.Size(518, 313)
         Me.Panel4.TabIndex = 3
         '
-        'Label4
+        'BtnRemoveCharacter
         '
-        Me.Label4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label4.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 3)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(510, 38)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Combo Boxes"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'CboState
-        '
-        Me.CboState.FormattingEnabled = True
-        Me.CboState.Items.AddRange(New Object() {"CA", "FL", "MD", "NY", "PA", "TX"})
-        Me.CboState.Location = New System.Drawing.Point(65, 50)
-        Me.CboState.Name = "CboState"
-        Me.CboState.Size = New System.Drawing.Size(165, 32)
-        Me.CboState.Sorted = True
-        Me.CboState.TabIndex = 1
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(3, 53)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(56, 24)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "State"
-        '
-        'BtnDisplayMessage
-        '
-        Me.BtnDisplayMessage.Location = New System.Drawing.Point(236, 50)
-        Me.BtnDisplayMessage.Name = "BtnDisplayMessage"
-        Me.BtnDisplayMessage.Size = New System.Drawing.Size(277, 32)
-        Me.BtnDisplayMessage.TabIndex = 3
-        Me.BtnDisplayMessage.Text = "Display Message"
-        Me.BtnDisplayMessage.UseVisualStyleBackColor = True
-        '
-        'LblSystemMessage
-        '
-        Me.LblSystemMessage.Location = New System.Drawing.Point(61, 104)
-        Me.LblSystemMessage.Name = "LblSystemMessage"
-        Me.LblSystemMessage.Size = New System.Drawing.Size(452, 84)
-        Me.LblSystemMessage.TabIndex = 4
-        Me.LblSystemMessage.Text = "System Message"
-        Me.LblSystemMessage.Visible = False
+        Me.BtnRemoveCharacter.ForeColor = System.Drawing.Color.Maroon
+        Me.BtnRemoveCharacter.Location = New System.Drawing.Point(174, 270)
+        Me.BtnRemoveCharacter.Name = "BtnRemoveCharacter"
+        Me.BtnRemoveCharacter.Size = New System.Drawing.Size(339, 32)
+        Me.BtnRemoveCharacter.TabIndex = 8
+        Me.BtnRemoveCharacter.Text = "Remove Character"
+        Me.BtnRemoveCharacter.UseVisualStyleBackColor = True
         '
         'BtnAddCharacter
         '
@@ -411,15 +377,57 @@ Partial Class FrmComboBoxesAndListBoxes
         Me.CboBuffyCharacters.Sorted = True
         Me.CboBuffyCharacters.TabIndex = 5
         '
-        'BtnRemoveCharacter
+        'LblSystemMessage
         '
-        Me.BtnRemoveCharacter.ForeColor = System.Drawing.Color.Maroon
-        Me.BtnRemoveCharacter.Location = New System.Drawing.Point(174, 270)
-        Me.BtnRemoveCharacter.Name = "BtnRemoveCharacter"
-        Me.BtnRemoveCharacter.Size = New System.Drawing.Size(339, 32)
-        Me.BtnRemoveCharacter.TabIndex = 8
-        Me.BtnRemoveCharacter.Text = "Remove Character"
-        Me.BtnRemoveCharacter.UseVisualStyleBackColor = True
+        Me.LblSystemMessage.Location = New System.Drawing.Point(61, 104)
+        Me.LblSystemMessage.Name = "LblSystemMessage"
+        Me.LblSystemMessage.Size = New System.Drawing.Size(452, 84)
+        Me.LblSystemMessage.TabIndex = 4
+        Me.LblSystemMessage.Text = "System Message"
+        Me.LblSystemMessage.Visible = False
+        '
+        'BtnDisplayMessage
+        '
+        Me.BtnDisplayMessage.Location = New System.Drawing.Point(236, 50)
+        Me.BtnDisplayMessage.Name = "BtnDisplayMessage"
+        Me.BtnDisplayMessage.Size = New System.Drawing.Size(277, 32)
+        Me.BtnDisplayMessage.TabIndex = 3
+        Me.BtnDisplayMessage.Text = "Display Message"
+        Me.BtnDisplayMessage.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(3, 53)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(56, 24)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "State"
+        '
+        'CboState
+        '
+        Me.CboState.FormattingEnabled = True
+        Me.CboState.Items.AddRange(New Object() {"CA", "FL", "MD", "NY", "PA", "TX"})
+        Me.CboState.Location = New System.Drawing.Point(65, 50)
+        Me.CboState.Name = "CboState"
+        Me.CboState.Size = New System.Drawing.Size(165, 32)
+        Me.CboState.Sorted = True
+        Me.CboState.TabIndex = 1
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(3, 3)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(510, 38)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "Combo Boxes"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmComboBoxesAndListBoxes
         '
@@ -431,7 +439,7 @@ Partial Class FrmComboBoxesAndListBoxes
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "FrmComboBoxesAndListBoxes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Combo Boxes And List Boxes"
