@@ -123,6 +123,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmComboBoxesAndListBoxes.resx">
+      <DependentUpon>FrmComboBoxesAndListBoxes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDatesAndTimes.resx">
       <DependentUpon>FrmDatesAndTimes.vb</DependentUpon>
     </EmbeddedResource>
