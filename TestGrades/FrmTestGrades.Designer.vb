@@ -25,22 +25,24 @@ Partial Class FrmTestGrades
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnExpand = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtFirstName = New System.Windows.Forms.TextBox()
+        Me.TxtLastName = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TxtFoundation = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TxtAdvanced = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TxtIntermediale = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.BtnCalculate = New System.Windows.Forms.Button()
+        Me.TxtAverage = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TxtLetterGrade = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.CboCourse = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.TxtTotalScore = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -60,7 +62,7 @@ Partial Class FrmTestGrades
         '
         Me.BtnExpand.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnExpand.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExpand.Location = New System.Drawing.Point(637, 400)
+        Me.BtnExpand.Location = New System.Drawing.Point(637, 443)
         Me.BtnExpand.Name = "BtnExpand"
         Me.BtnExpand.Size = New System.Drawing.Size(86, 56)
         Me.BtnExpand.TabIndex = 1
@@ -77,21 +79,21 @@ Partial Class FrmTestGrades
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "First Name"
         '
-        'TextBox1
+        'TxtFirstName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(161, 131)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(210, 29)
-        Me.TextBox1.TabIndex = 3
-        Me.TextBox1.Text = "Buffy"
+        Me.TxtFirstName.Location = New System.Drawing.Point(161, 131)
+        Me.TxtFirstName.Name = "TxtFirstName"
+        Me.TxtFirstName.Size = New System.Drawing.Size(210, 29)
+        Me.TxtFirstName.TabIndex = 3
+        Me.TxtFirstName.Text = "Buffy"
         '
-        'TextBox2
+        'TxtLastName
         '
-        Me.TextBox2.Location = New System.Drawing.Point(161, 168)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(210, 29)
-        Me.TextBox2.TabIndex = 5
-        Me.TextBox2.Text = "Summers"
+        Me.TxtLastName.Location = New System.Drawing.Point(161, 168)
+        Me.TxtLastName.Name = "TxtLastName"
+        Me.TxtLastName.Size = New System.Drawing.Size(210, 29)
+        Me.TxtLastName.TabIndex = 5
+        Me.TxtLastName.Text = "Summers"
         '
         'Label3
         '
@@ -103,14 +105,14 @@ Partial Class FrmTestGrades
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Last Name"
         '
-        'TextBox3
+        'TxtFoundation
         '
-        Me.TextBox3.Location = New System.Drawing.Point(584, 131)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(139, 29)
-        Me.TextBox3.TabIndex = 7
-        Me.TextBox3.Text = "90"
-        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TxtFoundation.Location = New System.Drawing.Point(584, 131)
+        Me.TxtFoundation.Name = "TxtFoundation"
+        Me.TxtFoundation.Size = New System.Drawing.Size(139, 29)
+        Me.TxtFoundation.TabIndex = 7
+        Me.TxtFoundation.Text = "90"
+        Me.TxtFoundation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
         '
@@ -122,14 +124,14 @@ Partial Class FrmTestGrades
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Foundation"
         '
-        'TextBox4
+        'TxtAdvanced
         '
-        Me.TextBox4.Location = New System.Drawing.Point(584, 201)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(139, 29)
-        Me.TextBox4.TabIndex = 9
-        Me.TextBox4.Text = "89"
-        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TxtAdvanced.Location = New System.Drawing.Point(584, 201)
+        Me.TxtAdvanced.Name = "TxtAdvanced"
+        Me.TxtAdvanced.Size = New System.Drawing.Size(139, 29)
+        Me.TxtAdvanced.TabIndex = 9
+        Me.TxtAdvanced.Text = "89"
+        Me.TxtAdvanced.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
         '
@@ -141,14 +143,14 @@ Partial Class FrmTestGrades
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Advanced"
         '
-        'TextBox5
+        'TxtIntermediale
         '
-        Me.TextBox5.Location = New System.Drawing.Point(584, 166)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(139, 29)
-        Me.TextBox5.TabIndex = 11
-        Me.TextBox5.Text = "92"
-        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TxtIntermediale.Location = New System.Drawing.Point(584, 166)
+        Me.TxtIntermediale.Name = "TxtIntermediale"
+        Me.TxtIntermediale.Size = New System.Drawing.Size(139, 29)
+        Me.TxtIntermediale.TabIndex = 11
+        Me.TxtIntermediale.Text = "92"
+        Me.TxtIntermediale.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label6
         '
@@ -160,50 +162,50 @@ Partial Class FrmTestGrades
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Intermediate"
         '
-        'Button1
+        'BtnCalculate
         '
-        Me.Button1.Location = New System.Drawing.Point(584, 251)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(139, 47)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Calculate"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnCalculate.Location = New System.Drawing.Point(584, 251)
+        Me.BtnCalculate.Name = "BtnCalculate"
+        Me.BtnCalculate.Size = New System.Drawing.Size(139, 47)
+        Me.BtnCalculate.TabIndex = 12
+        Me.BtnCalculate.Text = "Calculate"
+        Me.BtnCalculate.UseVisualStyleBackColor = True
         '
-        'TextBox6
+        'TxtAverage
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(584, 357)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(139, 29)
-        Me.TextBox6.TabIndex = 16
-        Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TxtAverage.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtAverage.Location = New System.Drawing.Point(584, 352)
+        Me.TxtAverage.Name = "TxtAverage"
+        Me.TxtAverage.ReadOnly = True
+        Me.TxtAverage.Size = New System.Drawing.Size(139, 29)
+        Me.TxtAverage.TabIndex = 16
+        Me.TxtAverage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(453, 360)
+        Me.Label7.Location = New System.Drawing.Point(453, 355)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(88, 24)
+        Me.Label7.Size = New System.Drawing.Size(124, 24)
         Me.Label7.TabIndex = 15
-        Me.Label7.Text = "Average"
+        Me.Label7.Text = "Average (%)"
         '
-        'TextBox7
+        'TxtLetterGrade
         '
-        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(584, 322)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(139, 29)
-        Me.TextBox7.TabIndex = 14
-        Me.TextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TxtLetterGrade.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtLetterGrade.Location = New System.Drawing.Point(584, 387)
+        Me.TxtLetterGrade.Name = "TxtLetterGrade"
+        Me.TxtLetterGrade.ReadOnly = True
+        Me.TxtLetterGrade.Size = New System.Drawing.Size(139, 29)
+        Me.TxtLetterGrade.TabIndex = 14
+        Me.TxtLetterGrade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(453, 325)
+        Me.Label8.Location = New System.Drawing.Point(453, 390)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(125, 24)
         Me.Label8.TabIndex = 13
@@ -229,27 +231,49 @@ Partial Class FrmTestGrades
         Me.Label9.TabIndex = 18
         Me.Label9.Text = "Course"
         '
+        'TxtTotalScore
+        '
+        Me.TxtTotalScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtTotalScore.Location = New System.Drawing.Point(584, 317)
+        Me.TxtTotalScore.Name = "TxtTotalScore"
+        Me.TxtTotalScore.ReadOnly = True
+        Me.TxtTotalScore.Size = New System.Drawing.Size(139, 29)
+        Me.TxtTotalScore.TabIndex = 20
+        Me.TxtTotalScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(453, 320)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(117, 24)
+        Me.Label10.TabIndex = 19
+        Me.Label10.Text = "Total Score"
+        '
         'FrmTestGrades
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(761, 468)
+        Me.ClientSize = New System.Drawing.Size(761, 511)
+        Me.Controls.Add(Me.TxtTotalScore)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.CboCourse)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.TxtAverage)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.TxtLetterGrade)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.BtnCalculate)
+        Me.Controls.Add(Me.TxtIntermediale)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.TxtAdvanced)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.TxtFoundation)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TxtLastName)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TxtFirstName)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.BtnExpand)
         Me.Controls.Add(Me.Label1)
@@ -267,20 +291,22 @@ Partial Class FrmTestGrades
     Friend WithEvents Label1 As Label
     Friend WithEvents BtnExpand As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtFirstName As TextBox
+    Friend WithEvents TxtLastName As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TxtFoundation As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TxtAdvanced As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TxtIntermediale As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents BtnCalculate As Button
+    Friend WithEvents TxtAverage As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TxtLetterGrade As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents CboCourse As ComboBox
     Friend WithEvents Label9 As Label
+    Friend WithEvents TxtTotalScore As TextBox
+    Friend WithEvents Label10 As Label
 End Class
