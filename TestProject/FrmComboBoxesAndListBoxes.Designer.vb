@@ -382,6 +382,7 @@ Partial Class FrmComboBoxesAndListBoxes
         '
         'BtnAddCharacter
         '
+        Me.BtnAddCharacter.ForeColor = System.Drawing.Color.Green
         Me.BtnAddCharacter.Location = New System.Drawing.Point(174, 232)
         Me.BtnAddCharacter.Name = "BtnAddCharacter"
         Me.BtnAddCharacter.Size = New System.Drawing.Size(339, 32)
@@ -412,6 +413,7 @@ Partial Class FrmComboBoxesAndListBoxes
         '
         'BtnRemoveCharacter
         '
+        Me.BtnRemoveCharacter.ForeColor = System.Drawing.Color.Maroon
         Me.BtnRemoveCharacter.Location = New System.Drawing.Point(174, 270)
         Me.BtnRemoveCharacter.Name = "BtnRemoveCharacter"
         Me.BtnRemoveCharacter.Size = New System.Drawing.Size(339, 32)
