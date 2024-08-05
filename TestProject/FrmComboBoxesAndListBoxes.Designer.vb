@@ -45,6 +45,14 @@ Partial Class FrmComboBoxesAndListBoxes
         Me.LstMagazinesSelected = New System.Windows.Forms.CheckedListBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.CboState = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.BtnDisplayMessage = New System.Windows.Forms.Button()
+        Me.LblSystemMessage = New System.Windows.Forms.Label()
+        Me.BtnAddCharacter = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.CboBuffyCharacters = New System.Windows.Forms.ComboBox()
+        Me.BtnRemoveCharacter = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -306,6 +314,14 @@ Partial Class FrmComboBoxesAndListBoxes
         'Panel4
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.BtnRemoveCharacter)
+        Me.Panel4.Controls.Add(Me.BtnAddCharacter)
+        Me.Panel4.Controls.Add(Me.Label6)
+        Me.Panel4.Controls.Add(Me.CboBuffyCharacters)
+        Me.Panel4.Controls.Add(Me.LblSystemMessage)
+        Me.Panel4.Controls.Add(Me.BtnDisplayMessage)
+        Me.Panel4.Controls.Add(Me.Label5)
+        Me.Panel4.Controls.Add(Me.CboState)
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Location = New System.Drawing.Point(536, 331)
         Me.Panel4.Name = "Panel4"
@@ -326,6 +342,83 @@ Partial Class FrmComboBoxesAndListBoxes
         Me.Label4.Text = "Combo Boxes"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'CboState
+        '
+        Me.CboState.FormattingEnabled = True
+        Me.CboState.Items.AddRange(New Object() {"CA", "FL", "MD", "NY", "PA", "TX"})
+        Me.CboState.Location = New System.Drawing.Point(65, 50)
+        Me.CboState.Name = "CboState"
+        Me.CboState.Size = New System.Drawing.Size(165, 32)
+        Me.CboState.Sorted = True
+        Me.CboState.TabIndex = 1
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(3, 53)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(56, 24)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "State"
+        '
+        'BtnDisplayMessage
+        '
+        Me.BtnDisplayMessage.Location = New System.Drawing.Point(236, 50)
+        Me.BtnDisplayMessage.Name = "BtnDisplayMessage"
+        Me.BtnDisplayMessage.Size = New System.Drawing.Size(277, 32)
+        Me.BtnDisplayMessage.TabIndex = 3
+        Me.BtnDisplayMessage.Text = "Display Message"
+        Me.BtnDisplayMessage.UseVisualStyleBackColor = True
+        '
+        'LblSystemMessage
+        '
+        Me.LblSystemMessage.Location = New System.Drawing.Point(61, 104)
+        Me.LblSystemMessage.Name = "LblSystemMessage"
+        Me.LblSystemMessage.Size = New System.Drawing.Size(452, 84)
+        Me.LblSystemMessage.TabIndex = 4
+        Me.LblSystemMessage.Text = "System Message"
+        Me.LblSystemMessage.Visible = False
+        '
+        'BtnAddCharacter
+        '
+        Me.BtnAddCharacter.Location = New System.Drawing.Point(174, 232)
+        Me.BtnAddCharacter.Name = "BtnAddCharacter"
+        Me.BtnAddCharacter.Size = New System.Drawing.Size(339, 32)
+        Me.BtnAddCharacter.TabIndex = 7
+        Me.BtnAddCharacter.Text = "Add Character"
+        Me.BtnAddCharacter.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(7, 197)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(161, 24)
+        Me.Label6.TabIndex = 6
+        Me.Label6.Text = "Buffy Characters"
+        '
+        'CboBuffyCharacters
+        '
+        Me.CboBuffyCharacters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboBuffyCharacters.FormattingEnabled = True
+        Me.CboBuffyCharacters.Items.AddRange(New Object() {"CA", "FL", "MD", "NY", "PA", "TX"})
+        Me.CboBuffyCharacters.Location = New System.Drawing.Point(174, 194)
+        Me.CboBuffyCharacters.Name = "CboBuffyCharacters"
+        Me.CboBuffyCharacters.Size = New System.Drawing.Size(339, 32)
+        Me.CboBuffyCharacters.Sorted = True
+        Me.CboBuffyCharacters.TabIndex = 5
+        '
+        'BtnRemoveCharacter
+        '
+        Me.BtnRemoveCharacter.Location = New System.Drawing.Point(174, 270)
+        Me.BtnRemoveCharacter.Name = "BtnRemoveCharacter"
+        Me.BtnRemoveCharacter.Size = New System.Drawing.Size(339, 32)
+        Me.BtnRemoveCharacter.TabIndex = 8
+        Me.BtnRemoveCharacter.Text = "Remove Character"
+        Me.BtnRemoveCharacter.UseVisualStyleBackColor = True
+        '
         'FrmComboBoxesAndListBoxes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
@@ -344,6 +437,7 @@ Partial Class FrmComboBoxesAndListBoxes
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -371,4 +465,12 @@ Partial Class FrmComboBoxesAndListBoxes
     Friend WithEvents LstMagazinesSelected As CheckedListBox
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents CboState As ComboBox
+    Friend WithEvents BtnAddCharacter As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents CboBuffyCharacters As ComboBox
+    Friend WithEvents LblSystemMessage As Label
+    Friend WithEvents BtnDisplayMessage As Button
+    Friend WithEvents BtnRemoveCharacter As Button
 End Class
