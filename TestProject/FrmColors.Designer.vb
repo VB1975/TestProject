@@ -33,22 +33,25 @@ Partial Class FrmColors
         Me.PnlRGBColorDisplay = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ScrRed = New System.Windows.Forms.HScrollBar()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.ScrGreen = New System.Windows.Forms.HScrollBar()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.ScrBlue = New System.Windows.Forms.HScrollBar()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TxtRedValue = New System.Windows.Forms.TextBox()
         Me.TxtGreenValue = New System.Windows.Forms.TextBox()
         Me.TxtBlueValue = New System.Windows.Forms.TextBox()
+        Me.TrackRed = New System.Windows.Forms.TrackBar()
+        Me.TrackGreen = New System.Windows.Forms.TrackBar()
+        Me.TrackBlue = New System.Windows.Forms.TrackBar()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.TrackRed, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrackGreen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrackBlue, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -133,20 +136,20 @@ Partial Class FrmColors
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.TrackBlue)
+        Me.Panel2.Controls.Add(Me.TrackGreen)
+        Me.Panel2.Controls.Add(Me.TrackRed)
         Me.Panel2.Controls.Add(Me.TxtBlueValue)
         Me.Panel2.Controls.Add(Me.TxtGreenValue)
         Me.Panel2.Controls.Add(Me.TxtRedValue)
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.Label12)
-        Me.Panel2.Controls.Add(Me.ScrBlue)
         Me.Panel2.Controls.Add(Me.Label13)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label9)
-        Me.Panel2.Controls.Add(Me.ScrGreen)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.ScrRed)
         Me.Panel2.Controls.Add(Me.PnlRGBColorDisplay)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label6)
@@ -188,16 +191,6 @@ Partial Class FrmColors
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "RGB Color Picker"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'ScrRed
-        '
-        Me.ScrRed.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ScrRed.Location = New System.Drawing.Point(54, 74)
-        Me.ScrRed.Maximum = 255
-        Me.ScrRed.Name = "ScrRed"
-        Me.ScrRed.Size = New System.Drawing.Size(201, 17)
-        Me.ScrRed.TabIndex = 6
         '
         'Label4
         '
@@ -241,16 +234,6 @@ Partial Class FrmColors
         Me.Label9.TabIndex = 11
         Me.Label9.Text = "0"
         '
-        'ScrGreen
-        '
-        Me.ScrGreen.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ScrGreen.Location = New System.Drawing.Point(54, 129)
-        Me.ScrGreen.Maximum = 255
-        Me.ScrGreen.Name = "ScrGreen"
-        Me.ScrGreen.Size = New System.Drawing.Size(201, 17)
-        Me.ScrGreen.TabIndex = 10
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -281,16 +264,6 @@ Partial Class FrmColors
         Me.Label12.Size = New System.Drawing.Size(18, 20)
         Me.Label12.TabIndex = 15
         Me.Label12.Text = "0"
-        '
-        'ScrBlue
-        '
-        Me.ScrBlue.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ScrBlue.Location = New System.Drawing.Point(54, 184)
-        Me.ScrBlue.Maximum = 255
-        Me.ScrBlue.Name = "ScrBlue"
-        Me.ScrBlue.Size = New System.Drawing.Size(201, 17)
-        Me.ScrBlue.TabIndex = 14
         '
         'Label13
         '
@@ -335,6 +308,42 @@ Partial Class FrmColors
         Me.TxtBlueValue.Text = "0"
         Me.TxtBlueValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'TrackRed
+        '
+        Me.TrackRed.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TrackRed.AutoSize = False
+        Me.TrackRed.Location = New System.Drawing.Point(57, 71)
+        Me.TrackRed.Maximum = 255
+        Me.TrackRed.Name = "TrackRed"
+        Me.TrackRed.Size = New System.Drawing.Size(198, 21)
+        Me.TrackRed.TabIndex = 6
+        Me.TrackRed.TickStyle = System.Windows.Forms.TickStyle.None
+        '
+        'TrackGreen
+        '
+        Me.TrackGreen.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TrackGreen.AutoSize = False
+        Me.TrackGreen.Location = New System.Drawing.Point(57, 126)
+        Me.TrackGreen.Maximum = 255
+        Me.TrackGreen.Name = "TrackGreen"
+        Me.TrackGreen.Size = New System.Drawing.Size(198, 21)
+        Me.TrackGreen.TabIndex = 19
+        Me.TrackGreen.TickStyle = System.Windows.Forms.TickStyle.None
+        '
+        'TrackBlue
+        '
+        Me.TrackBlue.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TrackBlue.AutoSize = False
+        Me.TrackBlue.Location = New System.Drawing.Point(57, 180)
+        Me.TrackBlue.Maximum = 255
+        Me.TrackBlue.Name = "TrackBlue"
+        Me.TrackBlue.Size = New System.Drawing.Size(198, 21)
+        Me.TrackBlue.TabIndex = 20
+        Me.TrackBlue.TickStyle = System.Windows.Forms.TickStyle.None
+        '
         'FrmColors
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
@@ -351,6 +360,9 @@ Partial Class FrmColors
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.TrackRed, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrackGreen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrackBlue, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -364,20 +376,20 @@ Partial Class FrmColors
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label4 As Label
-    Friend WithEvents ScrRed As HScrollBar
     Friend WithEvents PnlRGBColorDisplay As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents ScrBlue As HScrollBar
     Friend WithEvents Label13 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents ScrGreen As HScrollBar
     Friend WithEvents Label10 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents TxtBlueValue As TextBox
     Friend WithEvents TxtGreenValue As TextBox
     Friend WithEvents TxtRedValue As TextBox
+    Friend WithEvents TrackBlue As TrackBar
+    Friend WithEvents TrackGreen As TrackBar
+    Friend WithEvents TrackRed As TrackBar
 End Class
