@@ -30,20 +30,23 @@ Partial Class FrmColors
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PnlColorDisplay = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.PnlRGBColorDisplay = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.HScrollBar1 = New System.Windows.Forms.HScrollBar()
+        Me.ScrRed = New System.Windows.Forms.HScrollBar()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.HScrollBar2 = New System.Windows.Forms.HScrollBar()
+        Me.ScrGreen = New System.Windows.Forms.HScrollBar()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.HScrollBar3 = New System.Windows.Forms.HScrollBar()
+        Me.ScrBlue = New System.Windows.Forms.HScrollBar()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.TxtRedValue = New System.Windows.Forms.TextBox()
+        Me.TxtGreenValue = New System.Windows.Forms.TextBox()
+        Me.TxtBlueValue = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -59,7 +62,7 @@ Partial Class FrmColors
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(403, 227)
+        Me.Panel1.Size = New System.Drawing.Size(410, 219)
         Me.Panel1.TabIndex = 0
         '
         'Label1
@@ -71,7 +74,7 @@ Partial Class FrmColors
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(3, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(395, 43)
+        Me.Label1.Size = New System.Drawing.Size(402, 43)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Combo Box Color Pickers"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -94,7 +97,7 @@ Partial Class FrmColors
         Me.CboStandardColors.FormattingEnabled = True
         Me.CboStandardColors.Location = New System.Drawing.Point(7, 98)
         Me.CboStandardColors.Name = "CboStandardColors"
-        Me.CboStandardColors.Size = New System.Drawing.Size(274, 32)
+        Me.CboStandardColors.Size = New System.Drawing.Size(281, 32)
         Me.CboStandardColors.TabIndex = 2
         '
         'CboSystemColors
@@ -103,16 +106,16 @@ Partial Class FrmColors
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CboSystemColors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboSystemColors.FormattingEnabled = True
-        Me.CboSystemColors.Location = New System.Drawing.Point(7, 174)
+        Me.CboSystemColors.Location = New System.Drawing.Point(7, 173)
         Me.CboSystemColors.Name = "CboSystemColors"
-        Me.CboSystemColors.Size = New System.Drawing.Size(274, 32)
+        Me.CboSystemColors.Size = New System.Drawing.Size(281, 32)
         Me.CboSystemColors.TabIndex = 4
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(3, 147)
+        Me.Label3.Location = New System.Drawing.Point(3, 146)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(143, 24)
         Me.Label3.TabIndex = 3
@@ -122,7 +125,7 @@ Partial Class FrmColors
         '
         Me.PnlColorDisplay.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PnlColorDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PnlColorDisplay.Location = New System.Drawing.Point(287, 98)
+        Me.PnlColorDisplay.Location = New System.Drawing.Point(294, 98)
         Me.PnlColorDisplay.Name = "PnlColorDisplay"
         Me.PnlColorDisplay.Size = New System.Drawing.Size(108, 108)
         Me.PnlColorDisplay.TabIndex = 5
@@ -130,34 +133,37 @@ Partial Class FrmColors
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.TxtBlueValue)
+        Me.Panel2.Controls.Add(Me.TxtGreenValue)
+        Me.Panel2.Controls.Add(Me.TxtRedValue)
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.Label12)
-        Me.Panel2.Controls.Add(Me.HScrollBar3)
+        Me.Panel2.Controls.Add(Me.ScrBlue)
         Me.Panel2.Controls.Add(Me.Label13)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label9)
-        Me.Panel2.Controls.Add(Me.HScrollBar2)
+        Me.Panel2.Controls.Add(Me.ScrGreen)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.HScrollBar1)
-        Me.Panel2.Controls.Add(Me.Panel3)
+        Me.Panel2.Controls.Add(Me.ScrRed)
+        Me.Panel2.Controls.Add(Me.PnlRGBColorDisplay)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Location = New System.Drawing.Point(421, 12)
+        Me.Panel2.Location = New System.Drawing.Point(428, 12)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(478, 227)
+        Me.Panel2.Size = New System.Drawing.Size(577, 219)
         Me.Panel2.TabIndex = 6
         '
-        'Panel3
+        'PnlRGBColorDisplay
         '
-        Me.Panel3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel3.BackColor = System.Drawing.Color.Black
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Location = New System.Drawing.Point(367, 74)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(101, 101)
-        Me.Panel3.TabIndex = 5
+        Me.PnlRGBColorDisplay.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PnlRGBColorDisplay.BackColor = System.Drawing.Color.Black
+        Me.PnlRGBColorDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PnlRGBColorDisplay.Location = New System.Drawing.Point(431, 65)
+        Me.PnlRGBColorDisplay.Name = "PnlRGBColorDisplay"
+        Me.PnlRGBColorDisplay.Size = New System.Drawing.Size(141, 141)
+        Me.PnlRGBColorDisplay.TabIndex = 5
         '
         'Label5
         '
@@ -178,20 +184,20 @@ Partial Class FrmColors
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(3, 3)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(470, 43)
+        Me.Label6.Size = New System.Drawing.Size(569, 43)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "RGB Color Picker"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'HScrollBar1
+        'ScrRed
         '
-        Me.HScrollBar1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.ScrRed.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.HScrollBar1.Location = New System.Drawing.Point(54, 74)
-        Me.HScrollBar1.Maximum = 255
-        Me.HScrollBar1.Name = "HScrollBar1"
-        Me.HScrollBar1.Size = New System.Drawing.Size(253, 17)
-        Me.HScrollBar1.TabIndex = 6
+        Me.ScrRed.Location = New System.Drawing.Point(54, 74)
+        Me.ScrRed.Maximum = 255
+        Me.ScrRed.Name = "ScrRed"
+        Me.ScrRed.Size = New System.Drawing.Size(201, 17)
+        Me.ScrRed.TabIndex = 6
         '
         'Label4
         '
@@ -208,7 +214,7 @@ Partial Class FrmColors
         Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(313, 71)
+        Me.Label7.Location = New System.Drawing.Point(261, 71)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(36, 20)
         Me.Label7.TabIndex = 8
@@ -219,7 +225,7 @@ Partial Class FrmColors
         Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(313, 110)
+        Me.Label8.Location = New System.Drawing.Point(261, 126)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(36, 20)
         Me.Label8.TabIndex = 12
@@ -229,27 +235,27 @@ Partial Class FrmColors
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(33, 110)
+        Me.Label9.Location = New System.Drawing.Point(33, 126)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(18, 20)
         Me.Label9.TabIndex = 11
         Me.Label9.Text = "0"
         '
-        'HScrollBar2
+        'ScrGreen
         '
-        Me.HScrollBar2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.ScrGreen.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.HScrollBar2.Location = New System.Drawing.Point(54, 113)
-        Me.HScrollBar2.Maximum = 255
-        Me.HScrollBar2.Name = "HScrollBar2"
-        Me.HScrollBar2.Size = New System.Drawing.Size(253, 17)
-        Me.HScrollBar2.TabIndex = 10
+        Me.ScrGreen.Location = New System.Drawing.Point(54, 129)
+        Me.ScrGreen.Maximum = 255
+        Me.ScrGreen.Name = "ScrGreen"
+        Me.ScrGreen.Size = New System.Drawing.Size(201, 17)
+        Me.ScrGreen.TabIndex = 10
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(3, 110)
+        Me.Label10.Location = New System.Drawing.Point(3, 126)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(25, 24)
         Me.Label10.TabIndex = 9
@@ -260,7 +266,7 @@ Partial Class FrmColors
         Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(313, 151)
+        Me.Label11.Location = New System.Drawing.Point(261, 181)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(36, 20)
         Me.Label11.TabIndex = 16
@@ -270,37 +276,70 @@ Partial Class FrmColors
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(33, 151)
+        Me.Label12.Location = New System.Drawing.Point(33, 181)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(18, 20)
         Me.Label12.TabIndex = 15
         Me.Label12.Text = "0"
         '
-        'HScrollBar3
+        'ScrBlue
         '
-        Me.HScrollBar3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.ScrBlue.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.HScrollBar3.Location = New System.Drawing.Point(54, 154)
-        Me.HScrollBar3.Maximum = 255
-        Me.HScrollBar3.Name = "HScrollBar3"
-        Me.HScrollBar3.Size = New System.Drawing.Size(253, 17)
-        Me.HScrollBar3.TabIndex = 14
+        Me.ScrBlue.Location = New System.Drawing.Point(54, 184)
+        Me.ScrBlue.Maximum = 255
+        Me.ScrBlue.Name = "ScrBlue"
+        Me.ScrBlue.Size = New System.Drawing.Size(201, 17)
+        Me.ScrBlue.TabIndex = 14
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(3, 151)
+        Me.Label13.Location = New System.Drawing.Point(3, 181)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(23, 24)
         Me.Label13.TabIndex = 13
         Me.Label13.Text = "B"
         '
+        'TxtRedValue
+        '
+        Me.TxtRedValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtRedValue.ForeColor = System.Drawing.Color.Red
+        Me.TxtRedValue.Location = New System.Drawing.Point(324, 66)
+        Me.TxtRedValue.Name = "TxtRedValue"
+        Me.TxtRedValue.Size = New System.Drawing.Size(81, 29)
+        Me.TxtRedValue.TabIndex = 7
+        Me.TxtRedValue.Text = "0"
+        Me.TxtRedValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TxtGreenValue
+        '
+        Me.TxtGreenValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtGreenValue.ForeColor = System.Drawing.Color.Green
+        Me.TxtGreenValue.Location = New System.Drawing.Point(324, 121)
+        Me.TxtGreenValue.Name = "TxtGreenValue"
+        Me.TxtGreenValue.Size = New System.Drawing.Size(81, 29)
+        Me.TxtGreenValue.TabIndex = 17
+        Me.TxtGreenValue.Text = "0"
+        Me.TxtGreenValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TxtBlueValue
+        '
+        Me.TxtBlueValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtBlueValue.ForeColor = System.Drawing.Color.Blue
+        Me.TxtBlueValue.Location = New System.Drawing.Point(324, 174)
+        Me.TxtBlueValue.Name = "TxtBlueValue"
+        Me.TxtBlueValue.Size = New System.Drawing.Size(81, 29)
+        Me.TxtBlueValue.TabIndex = 18
+        Me.TxtBlueValue.Text = "0"
+        Me.TxtBlueValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'FrmColors
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(908, 779)
+        Me.ClientSize = New System.Drawing.Size(1015, 779)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -325,17 +364,20 @@ Partial Class FrmColors
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label4 As Label
-    Friend WithEvents HScrollBar1 As HScrollBar
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents ScrRed As HScrollBar
+    Friend WithEvents PnlRGBColorDisplay As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents HScrollBar3 As HScrollBar
+    Friend WithEvents ScrBlue As HScrollBar
     Friend WithEvents Label13 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents HScrollBar2 As HScrollBar
+    Friend WithEvents ScrGreen As HScrollBar
     Friend WithEvents Label10 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents TxtBlueValue As TextBox
+    Friend WithEvents TxtGreenValue As TextBox
+    Friend WithEvents TxtRedValue As TextBox
 End Class
