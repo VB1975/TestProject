@@ -105,4 +105,12 @@ Public Class FrmColors
         End If
 
     End Sub
+
+    Private Sub ScrollChange(sender As Object, e As EventArgs) Handles TrackRed.Scroll, TrackGreen.Scroll, TrackBlue.Scroll
+
+    End Sub
+
+    Private Sub ValueChange(sender As Object, e As EventArgs) Handles TxtRedValue.TextChanged, TxtGreenValue.TextChanged, TxtBlueValue.TextChanged
+
+    End Sub
 End Class

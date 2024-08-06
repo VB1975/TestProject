@@ -51,12 +51,22 @@ Partial Class FrmColors
         Me.PnlColorDialogDisplay = New System.Windows.Forms.Panel()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.BtnSelectBackColor = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.BtnSelectColor1 = New System.Windows.Forms.Button()
+        Me.BtnSelectColor2 = New System.Windows.Forms.Button()
+        Me.PnlColor1 = New System.Windows.Forms.Panel()
+        Me.PnlColor2 = New System.Windows.Forms.Panel()
+        Me.TxtColor1Hex = New System.Windows.Forms.TextBox()
+        Me.BtnColor2Hex = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.TrackBlue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackGreen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackRed, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -392,11 +402,99 @@ Partial Class FrmColors
         Me.BtnSelectBackColor.Text = "Select Back Color"
         Me.BtnSelectBackColor.UseVisualStyleBackColor = True
         '
+        'Panel4
+        '
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.BtnColor2Hex)
+        Me.Panel4.Controls.Add(Me.TxtColor1Hex)
+        Me.Panel4.Controls.Add(Me.PnlColor2)
+        Me.Panel4.Controls.Add(Me.PnlColor1)
+        Me.Panel4.Controls.Add(Me.BtnSelectColor2)
+        Me.Panel4.Controls.Add(Me.BtnSelectColor1)
+        Me.Panel4.Controls.Add(Me.Panel5)
+        Me.Panel4.Controls.Add(Me.Label24)
+        Me.Panel4.Location = New System.Drawing.Point(428, 237)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(577, 202)
+        Me.Panel4.TabIndex = 8
+        '
+        'Label24
+        '
+        Me.Label24.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label24.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(3, 3)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(569, 43)
+        Me.Label24.TabIndex = 0
+        Me.Label24.Text = "RGB Color Picker"
+        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel5
+        '
+        Me.Panel5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel5.Location = New System.Drawing.Point(464, 77)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(108, 108)
+        Me.Panel5.TabIndex = 6
+        '
+        'BtnSelectColor1
+        '
+        Me.BtnSelectColor1.Location = New System.Drawing.Point(3, 77)
+        Me.BtnSelectColor1.Name = "BtnSelectColor1"
+        Me.BtnSelectColor1.Size = New System.Drawing.Size(175, 39)
+        Me.BtnSelectColor1.TabIndex = 7
+        Me.BtnSelectColor1.Text = "Select Color 1"
+        Me.BtnSelectColor1.UseVisualStyleBackColor = True
+        '
+        'BtnSelectColor2
+        '
+        Me.BtnSelectColor2.Location = New System.Drawing.Point(3, 146)
+        Me.BtnSelectColor2.Name = "BtnSelectColor2"
+        Me.BtnSelectColor2.Size = New System.Drawing.Size(175, 39)
+        Me.BtnSelectColor2.TabIndex = 8
+        Me.BtnSelectColor2.Text = "Select Color 2"
+        Me.BtnSelectColor2.UseVisualStyleBackColor = True
+        '
+        'PnlColor1
+        '
+        Me.PnlColor1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PnlColor1.Location = New System.Drawing.Point(184, 77)
+        Me.PnlColor1.Name = "PnlColor1"
+        Me.PnlColor1.Size = New System.Drawing.Size(39, 39)
+        Me.PnlColor1.TabIndex = 9
+        '
+        'PnlColor2
+        '
+        Me.PnlColor2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PnlColor2.Location = New System.Drawing.Point(184, 146)
+        Me.PnlColor2.Name = "PnlColor2"
+        Me.PnlColor2.Size = New System.Drawing.Size(39, 39)
+        Me.PnlColor2.TabIndex = 10
+        '
+        'TxtColor1Hex
+        '
+        Me.TxtColor1Hex.Location = New System.Drawing.Point(229, 81)
+        Me.TxtColor1Hex.Name = "TxtColor1Hex"
+        Me.TxtColor1Hex.Size = New System.Drawing.Size(176, 29)
+        Me.TxtColor1Hex.TabIndex = 11
+        '
+        'BtnColor2Hex
+        '
+        Me.BtnColor2Hex.Location = New System.Drawing.Point(229, 150)
+        Me.BtnColor2Hex.Name = "BtnColor2Hex"
+        Me.BtnColor2Hex.Size = New System.Drawing.Size(176, 29)
+        Me.BtnColor2Hex.TabIndex = 12
+        '
         'FrmColors
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1015, 455)
+        Me.ClientSize = New System.Drawing.Size(1015, 459)
+        Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -413,6 +511,8 @@ Partial Class FrmColors
         CType(Me.TrackGreen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackRed, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -446,4 +546,13 @@ Partial Class FrmColors
     Friend WithEvents BtnSelectBackColor As Button
     Friend WithEvents PnlColorDialogDisplay As Panel
     Friend WithEvents Label16 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents BtnSelectColor1 As Button
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Label24 As Label
+    Friend WithEvents BtnColor2Hex As TextBox
+    Friend WithEvents TxtColor1Hex As TextBox
+    Friend WithEvents PnlColor2 As Panel
+    Friend WithEvents PnlColor1 As Panel
+    Friend WithEvents BtnSelectColor2 As Button
 End Class
