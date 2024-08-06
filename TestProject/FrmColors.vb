@@ -64,4 +64,39 @@ Public Class FrmColors
         End If
 
     End Sub
+
+    Private Sub ScrollChange() Handles TrackRed.Scroll, TrackGreen.Scroll, TrackBlue.Scroll
+
+        Dim R As Integer = TrackRed.Value, G As Integer = TrackGreen.Value, B As Integer = TrackBlue.Value
+
+        TxtRedValue.Text = R : TxtGreenValue.Text = G : TxtBlueValue.Text = B
+        PnlRGBColorDisplay.BackColor = Color.FromArgb(R, G, B)
+
+    End Sub
+
+    Private Sub ValueChange() Handles TxtRedValue.TextChanged, TxtGreenValue.TextChanged, TxtBlueValue.TextChanged
+
+        Dim R As Integer = Val(TxtRedValue.Text), G As Integer = Val(TxtGreenValue.Text), B As Integer = Val(TxtBlueValue.Text)
+
+        If R < 0 Then R = 0 : TxtRedValue.Text = 0
+        If G < 0 Then G = 0 : TxtGreenValue.Text = 0
+        If B < 0 Then B = 0 : TxtBlueValue.Text = 0
+
+        If R > 255 Then R = 255 : TxtRedValue.Text = 255
+        If G > 255 Then G = 255 : TxtGreenValue.Text = 255
+        If B > 255 Then B = 255 : TxtBlueValue.Text = 255
+
+        If TxtRedValue.Text.Contains(".") Then TxtRedValue.Text = Int(R)
+        If TxtGreenValue.Text.Contains(".") Then TxtGreenValue.Text = Int(G)
+        If TxtBlueValue.Text.Contains(".") Then TxtBlueValue.Text = Int(B)
+
+        TrackRed.Value = R : TrackGreen.Value = G : TrackBlue.Value = B
+
+        If Not IsNumeric(TxtRedValue.Text) Then TxtRedValue.Undo() : R = Val(TxtRedValue.Text) : TrackRed.Value = R
+        If Not IsNumeric(TxtGreenValue.Text) Then TxtGreenValue.Undo() : G = Val(TxtGreenValue.Text) : TrackGreen.Value = G
+        If Not IsNumeric(TxtBlueValue.Text) Then TxtBlueValue.Undo() : B = Val(TxtBlueValue.Text) : TrackBlue.Value = B
+
+        PnlRGBColorDisplay.BackColor = Color.FromArgb(R, G, B)
+
+    End Sub
 End Class

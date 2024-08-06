@@ -23,35 +23,35 @@ Partial Class FrmColors
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.CboStandardColors = New System.Windows.Forms.ComboBox()
+        Me.PnlColorDisplay = New System.Windows.Forms.Panel()
         Me.CboSystemColors = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.PnlColorDisplay = New System.Windows.Forms.Panel()
+        Me.CboStandardColors = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PnlRGBColorDisplay = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TrackBlue = New System.Windows.Forms.TrackBar()
+        Me.TrackGreen = New System.Windows.Forms.TrackBar()
+        Me.TrackRed = New System.Windows.Forms.TrackBar()
+        Me.TxtBlueValue = New System.Windows.Forms.TextBox()
+        Me.TxtGreenValue = New System.Windows.Forms.TextBox()
+        Me.TxtRedValue = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TxtRedValue = New System.Windows.Forms.TextBox()
-        Me.TxtGreenValue = New System.Windows.Forms.TextBox()
-        Me.TxtBlueValue = New System.Windows.Forms.TextBox()
-        Me.TrackRed = New System.Windows.Forms.TrackBar()
-        Me.TrackGreen = New System.Windows.Forms.TrackBar()
-        Me.TrackBlue = New System.Windows.Forms.TrackBar()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.PnlRGBColorDisplay = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.TrackRed, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TrackGreen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBlue, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrackGreen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrackRed, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -68,40 +68,14 @@ Partial Class FrmColors
         Me.Panel1.Size = New System.Drawing.Size(410, 219)
         Me.Panel1.TabIndex = 0
         '
-        'Label1
+        'PnlColorDisplay
         '
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(402, 43)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Combo Box Color Pickers"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 71)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(159, 24)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Standard Colors"
-        '
-        'CboStandardColors
-        '
-        Me.CboStandardColors.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CboStandardColors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboStandardColors.FormattingEnabled = True
-        Me.CboStandardColors.Location = New System.Drawing.Point(7, 98)
-        Me.CboStandardColors.Name = "CboStandardColors"
-        Me.CboStandardColors.Size = New System.Drawing.Size(281, 32)
-        Me.CboStandardColors.TabIndex = 2
+        Me.PnlColorDisplay.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PnlColorDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PnlColorDisplay.Location = New System.Drawing.Point(294, 98)
+        Me.PnlColorDisplay.Name = "PnlColorDisplay"
+        Me.PnlColorDisplay.Size = New System.Drawing.Size(108, 108)
+        Me.PnlColorDisplay.TabIndex = 5
         '
         'CboSystemColors
         '
@@ -124,14 +98,40 @@ Partial Class FrmColors
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "System Colors"
         '
-        'PnlColorDisplay
+        'CboStandardColors
         '
-        Me.PnlColorDisplay.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PnlColorDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PnlColorDisplay.Location = New System.Drawing.Point(294, 98)
-        Me.PnlColorDisplay.Name = "PnlColorDisplay"
-        Me.PnlColorDisplay.Size = New System.Drawing.Size(108, 108)
-        Me.PnlColorDisplay.TabIndex = 5
+        Me.CboStandardColors.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CboStandardColors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboStandardColors.FormattingEnabled = True
+        Me.CboStandardColors.Location = New System.Drawing.Point(7, 98)
+        Me.CboStandardColors.Name = "CboStandardColors"
+        Me.CboStandardColors.Size = New System.Drawing.Size(281, 32)
+        Me.CboStandardColors.TabIndex = 2
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(3, 71)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(159, 24)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Standard Colors"
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(402, 43)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Combo Box Color Pickers"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel2
         '
@@ -157,6 +157,158 @@ Partial Class FrmColors
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(577, 219)
         Me.Panel2.TabIndex = 6
+        '
+        'TrackBlue
+        '
+        Me.TrackBlue.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TrackBlue.AutoSize = False
+        Me.TrackBlue.Location = New System.Drawing.Point(57, 180)
+        Me.TrackBlue.Maximum = 255
+        Me.TrackBlue.Name = "TrackBlue"
+        Me.TrackBlue.Size = New System.Drawing.Size(198, 21)
+        Me.TrackBlue.TabIndex = 20
+        Me.TrackBlue.TickStyle = System.Windows.Forms.TickStyle.None
+        '
+        'TrackGreen
+        '
+        Me.TrackGreen.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TrackGreen.AutoSize = False
+        Me.TrackGreen.Location = New System.Drawing.Point(57, 126)
+        Me.TrackGreen.Maximum = 255
+        Me.TrackGreen.Name = "TrackGreen"
+        Me.TrackGreen.Size = New System.Drawing.Size(198, 21)
+        Me.TrackGreen.TabIndex = 19
+        Me.TrackGreen.TickStyle = System.Windows.Forms.TickStyle.None
+        '
+        'TrackRed
+        '
+        Me.TrackRed.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TrackRed.AutoSize = False
+        Me.TrackRed.Location = New System.Drawing.Point(57, 71)
+        Me.TrackRed.Maximum = 255
+        Me.TrackRed.Name = "TrackRed"
+        Me.TrackRed.Size = New System.Drawing.Size(198, 21)
+        Me.TrackRed.TabIndex = 6
+        Me.TrackRed.TickStyle = System.Windows.Forms.TickStyle.None
+        '
+        'TxtBlueValue
+        '
+        Me.TxtBlueValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtBlueValue.ForeColor = System.Drawing.Color.Blue
+        Me.TxtBlueValue.Location = New System.Drawing.Point(324, 174)
+        Me.TxtBlueValue.Name = "TxtBlueValue"
+        Me.TxtBlueValue.Size = New System.Drawing.Size(81, 29)
+        Me.TxtBlueValue.TabIndex = 18
+        Me.TxtBlueValue.Text = "0"
+        Me.TxtBlueValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TxtGreenValue
+        '
+        Me.TxtGreenValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtGreenValue.ForeColor = System.Drawing.Color.Green
+        Me.TxtGreenValue.Location = New System.Drawing.Point(324, 121)
+        Me.TxtGreenValue.Name = "TxtGreenValue"
+        Me.TxtGreenValue.Size = New System.Drawing.Size(81, 29)
+        Me.TxtGreenValue.TabIndex = 17
+        Me.TxtGreenValue.Text = "0"
+        Me.TxtGreenValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TxtRedValue
+        '
+        Me.TxtRedValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtRedValue.ForeColor = System.Drawing.Color.Red
+        Me.TxtRedValue.Location = New System.Drawing.Point(324, 66)
+        Me.TxtRedValue.Name = "TxtRedValue"
+        Me.TxtRedValue.Size = New System.Drawing.Size(81, 29)
+        Me.TxtRedValue.TabIndex = 7
+        Me.TxtRedValue.Text = "0"
+        Me.TxtRedValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(261, 181)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(36, 20)
+        Me.Label11.TabIndex = 16
+        Me.Label11.Text = "255"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(33, 181)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(18, 20)
+        Me.Label12.TabIndex = 15
+        Me.Label12.Text = "0"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(3, 181)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(23, 24)
+        Me.Label13.TabIndex = 13
+        Me.Label13.Text = "B"
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(261, 126)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(36, 20)
+        Me.Label8.TabIndex = 12
+        Me.Label8.Text = "255"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(33, 126)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(18, 20)
+        Me.Label9.TabIndex = 11
+        Me.Label9.Text = "0"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(3, 126)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(25, 24)
+        Me.Label10.TabIndex = 9
+        Me.Label10.Text = "G"
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(261, 71)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(36, 20)
+        Me.Label7.TabIndex = 8
+        Me.Label7.Text = "255"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(33, 71)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(18, 20)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "0"
         '
         'PnlRGBColorDisplay
         '
@@ -192,158 +344,6 @@ Partial Class FrmColors
         Me.Label6.Text = "RGB Color Picker"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(33, 71)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(18, 20)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "0"
-        '
-        'Label7
-        '
-        Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(261, 71)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(36, 20)
-        Me.Label7.TabIndex = 8
-        Me.Label7.Text = "255"
-        '
-        'Label8
-        '
-        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(261, 126)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(36, 20)
-        Me.Label8.TabIndex = 12
-        Me.Label8.Text = "255"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(33, 126)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(18, 20)
-        Me.Label9.TabIndex = 11
-        Me.Label9.Text = "0"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(3, 126)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(25, 24)
-        Me.Label10.TabIndex = 9
-        Me.Label10.Text = "G"
-        '
-        'Label11
-        '
-        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(261, 181)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(36, 20)
-        Me.Label11.TabIndex = 16
-        Me.Label11.Text = "255"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(33, 181)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(18, 20)
-        Me.Label12.TabIndex = 15
-        Me.Label12.Text = "0"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(3, 181)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(23, 24)
-        Me.Label13.TabIndex = 13
-        Me.Label13.Text = "B"
-        '
-        'TxtRedValue
-        '
-        Me.TxtRedValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TxtRedValue.ForeColor = System.Drawing.Color.Red
-        Me.TxtRedValue.Location = New System.Drawing.Point(324, 66)
-        Me.TxtRedValue.Name = "TxtRedValue"
-        Me.TxtRedValue.Size = New System.Drawing.Size(81, 29)
-        Me.TxtRedValue.TabIndex = 7
-        Me.TxtRedValue.Text = "0"
-        Me.TxtRedValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TxtGreenValue
-        '
-        Me.TxtGreenValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TxtGreenValue.ForeColor = System.Drawing.Color.Green
-        Me.TxtGreenValue.Location = New System.Drawing.Point(324, 121)
-        Me.TxtGreenValue.Name = "TxtGreenValue"
-        Me.TxtGreenValue.Size = New System.Drawing.Size(81, 29)
-        Me.TxtGreenValue.TabIndex = 17
-        Me.TxtGreenValue.Text = "0"
-        Me.TxtGreenValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TxtBlueValue
-        '
-        Me.TxtBlueValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TxtBlueValue.ForeColor = System.Drawing.Color.Blue
-        Me.TxtBlueValue.Location = New System.Drawing.Point(324, 174)
-        Me.TxtBlueValue.Name = "TxtBlueValue"
-        Me.TxtBlueValue.Size = New System.Drawing.Size(81, 29)
-        Me.TxtBlueValue.TabIndex = 18
-        Me.TxtBlueValue.Text = "0"
-        Me.TxtBlueValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TrackRed
-        '
-        Me.TrackRed.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TrackRed.AutoSize = False
-        Me.TrackRed.Location = New System.Drawing.Point(57, 71)
-        Me.TrackRed.Maximum = 255
-        Me.TrackRed.Name = "TrackRed"
-        Me.TrackRed.Size = New System.Drawing.Size(198, 21)
-        Me.TrackRed.TabIndex = 6
-        Me.TrackRed.TickStyle = System.Windows.Forms.TickStyle.None
-        '
-        'TrackGreen
-        '
-        Me.TrackGreen.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TrackGreen.AutoSize = False
-        Me.TrackGreen.Location = New System.Drawing.Point(57, 126)
-        Me.TrackGreen.Maximum = 255
-        Me.TrackGreen.Name = "TrackGreen"
-        Me.TrackGreen.Size = New System.Drawing.Size(198, 21)
-        Me.TrackGreen.TabIndex = 19
-        Me.TrackGreen.TickStyle = System.Windows.Forms.TickStyle.None
-        '
-        'TrackBlue
-        '
-        Me.TrackBlue.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TrackBlue.AutoSize = False
-        Me.TrackBlue.Location = New System.Drawing.Point(57, 180)
-        Me.TrackBlue.Maximum = 255
-        Me.TrackBlue.Name = "TrackBlue"
-        Me.TrackBlue.Size = New System.Drawing.Size(198, 21)
-        Me.TrackBlue.TabIndex = 20
-        Me.TrackBlue.TickStyle = System.Windows.Forms.TickStyle.None
-        '
         'FrmColors
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
@@ -352,7 +352,7 @@ Partial Class FrmColors
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "FrmColors"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Working With Colors"
@@ -360,9 +360,9 @@ Partial Class FrmColors
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.TrackRed, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TrackGreen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBlue, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrackGreen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrackRed, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
