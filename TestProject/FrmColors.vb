@@ -99,4 +99,14 @@ Public Class FrmColors
         PnlRGBColorDisplay.BackColor = Color.FromArgb(R, G, B)
 
     End Sub
+
+    Private Sub BtnSelectBackColor_Click(sender As Object, e As EventArgs) Handles BtnSelectBackColor.Click
+
+        Dim CD As New ColorDialog
+
+        If CD.ShowDialog <> DialogResult.Cancel Then
+            PnlColorDialogDisplay.BackColor = CD.Color
+        End If
+
+    End Sub
 End Class

@@ -47,11 +47,16 @@ Partial Class FrmColors
         Me.PnlRGBColorDisplay = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.PnlColorDialogDisplay = New System.Windows.Forms.Panel()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.BtnSelectBackColor = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.TrackBlue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackGreen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackRed, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -344,11 +349,55 @@ Partial Class FrmColors
         Me.Label6.Text = "RGB Color Picker"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Panel3
+        '
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.BtnSelectBackColor)
+        Me.Panel3.Controls.Add(Me.PnlColorDialogDisplay)
+        Me.Panel3.Controls.Add(Me.Label16)
+        Me.Panel3.Location = New System.Drawing.Point(12, 237)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(410, 202)
+        Me.Panel3.TabIndex = 7
+        '
+        'PnlColorDialogDisplay
+        '
+        Me.PnlColorDialogDisplay.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PnlColorDialogDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PnlColorDialogDisplay.Location = New System.Drawing.Point(294, 77)
+        Me.PnlColorDialogDisplay.Name = "PnlColorDialogDisplay"
+        Me.PnlColorDialogDisplay.Size = New System.Drawing.Size(108, 108)
+        Me.PnlColorDialogDisplay.TabIndex = 5
+        '
+        'Label16
+        '
+        Me.Label16.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label16.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(3, 3)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(402, 43)
+        Me.Label16.TabIndex = 0
+        Me.Label16.Text = " Color Dialog"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'BtnSelectBackColor
+        '
+        Me.BtnSelectBackColor.Location = New System.Drawing.Point(3, 77)
+        Me.BtnSelectBackColor.Name = "BtnSelectBackColor"
+        Me.BtnSelectBackColor.Size = New System.Drawing.Size(285, 39)
+        Me.BtnSelectBackColor.TabIndex = 6
+        Me.BtnSelectBackColor.Text = "Select Back Color"
+        Me.BtnSelectBackColor.UseVisualStyleBackColor = True
+        '
         'FrmColors
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1015, 779)
+        Me.ClientSize = New System.Drawing.Size(1015, 455)
+        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -363,6 +412,7 @@ Partial Class FrmColors
         CType(Me.TrackBlue, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackGreen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackRed, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -392,4 +442,8 @@ Partial Class FrmColors
     Friend WithEvents TrackBlue As TrackBar
     Friend WithEvents TrackGreen As TrackBar
     Friend WithEvents TrackRed As TrackBar
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents BtnSelectBackColor As Button
+    Friend WithEvents PnlColorDialogDisplay As Panel
+    Friend WithEvents Label16 As Label
 End Class
