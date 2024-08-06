@@ -6,17 +6,11 @@ Public Class FrmColors
 
     Private Sub PopulateStandardColors()
 
-        ' Clear any existing items in the ComboBox
         CboStandardColors.Items.Clear()
 
-        ' Iterate through all known colors
         For Each knownColorName In [Enum].GetNames(GetType(KnownColor))
-            ' Convert the known color name to a Color object
             Dim color As Color = Color.FromKnownColor([Enum].Parse(GetType(KnownColor), knownColorName))
-
-            ' Check if the color is a system color
             If Not color.IsSystemColor Then
-                ' Add the color name to the ComboBox if it's not a system color
                 CboStandardColors.Items.Add(color.Name)
             End If
         Next
@@ -25,17 +19,11 @@ Public Class FrmColors
 
     Private Sub PopulateSystemColors()
 
-        ' Clear any existing items in the ComboBox
         CboSystemColors.Items.Clear()
 
-        ' Iterate through all known colors
         For Each knownColorName In [Enum].GetNames(GetType(KnownColor))
-            ' Convert the known color name to a Color object
             Dim color As Color = Color.FromKnownColor([Enum].Parse(GetType(KnownColor), knownColorName))
-
-            ' Check if the color is a system color
             If color.IsSystemColor Then
-                ' Add the color name to the ComboBox if it's not a system color
                 CboSystemColors.Items.Add(color.Name)
             End If
         Next
