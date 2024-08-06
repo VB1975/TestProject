@@ -106,11 +106,68 @@ Public Class FrmColors
 
     End Sub
 
-    Private Sub ScrollChange(sender As Object, e As EventArgs) Handles TrackRed.Scroll, TrackGreen.Scroll, TrackBlue.Scroll
+    Private Sub SelectColor(Panel As Panel, Textbox As TextBox)
+
+        Dim CD As New ColorDialog
+
+        If CD.ShowDialog <> DialogResult.Cancel Then
+            Panel.BackColor = CD.Color
+            Textbox.Text = ColorToHex(CD.Color)
+        End If
 
     End Sub
 
-    Private Sub ValueChange(sender As Object, e As EventArgs) Handles TxtRedValue.TextChanged, TxtGreenValue.TextChanged, TxtBlueValue.TextChanged
+    Private Function ColorToHex(color As Color) As String
+
+        Return String.Format("#{0:X2}{1:X2}{2:X2}", color.R, color.G, color.B)
+
+    End Function
+
+    Private Sub BtnSelectColor1_Click(sender As Object, e As EventArgs) Handles BtnSelectColor1.Click
+
+        SelectColor(PnlColor1, TxtColor1Hex)
+
+    End Sub
+
+    Private Sub BtnSelectColor2_Click(sender As Object, e As EventArgs) Handles BtnSelectColor2.Click
+
+        SelectColor(PnlColor2, TxtColor2Hex)
+
+    End Sub
+
+    Private Sub BtnFlash_Click(sender As Object, e As EventArgs) Handles BtnFlash.Click
+
+        If TxtColor1Hex.Text.Equals(TxtColor2Hex.Text) Then
+            MessageBox.Show("Color 1 and Color 2 should be different." & Environment.NewLine &
+                            "The event will NOT run.", "Colors Match", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
+        If BtnFlash.Text = "Flash" Then
+            TimFlash.Enabled = True
+            BtnFlash.Text = "Regular"
+            BtnSelectColor1.Enabled = False
+            BtnSelectColor2.Enabled = False
+        Else
+            TimFlash.Enabled = False
+            BtnFlash.Text = "Flash"
+            PnlFlashingDisplay.BackColor = SystemColors.Control
+            BtnSelectColor1.Enabled = True
+            BtnSelectColor2.Enabled = True
+        End If
+
+    End Sub
+
+    Private Sub TimFlash_Tick(sender As Object, e As EventArgs) Handles TimFlash.Tick
+
+        Static Counter As Long
+        Counter += 1
+
+        If Counter Mod 2 = 0 Then
+            PnlFlashingDisplay.BackColor = PnlColor1.BackColor
+        Else
+            PnlFlashingDisplay.BackColor = PnlColor2.BackColor
+        End If
 
     End Sub
 End Class
