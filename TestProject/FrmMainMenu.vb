@@ -51,4 +51,11 @@
         OpenForm(frm)
 
     End Sub
+
+    Private Sub BtnWorkingWithColors_Click(sender As Object, e As EventArgs) Handles BtnWorkingWithColors.Click
+
+        Dim frm As New FrmColors
+        OpenForm(frm)
+
+    End Sub
 End Class

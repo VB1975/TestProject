@@ -27,6 +27,7 @@ Partial Class FrmMainMenu
         Me.BtnStrings = New System.Windows.Forms.Button()
         Me.BtnLooping = New System.Windows.Forms.Button()
         Me.BtnComboBoxesAndListBoxes = New System.Windows.Forms.Button()
+        Me.BtnWorkingWithColors = New System.Windows.Forms.Button()
         CType(Me.PicMainImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -75,11 +76,21 @@ Partial Class FrmMainMenu
         Me.BtnComboBoxesAndListBoxes.Text = "Working with Combo Boxes && List Boxes"
         Me.BtnComboBoxesAndListBoxes.UseVisualStyleBackColor = True
         '
+        'BtnWorkingWithColors
+        '
+        Me.BtnWorkingWithColors.Location = New System.Drawing.Point(315, 268)
+        Me.BtnWorkingWithColors.Name = "BtnWorkingWithColors"
+        Me.BtnWorkingWithColors.Size = New System.Drawing.Size(447, 58)
+        Me.BtnWorkingWithColors.TabIndex = 5
+        Me.BtnWorkingWithColors.Text = "Working with Colors"
+        Me.BtnWorkingWithColors.UseVisualStyleBackColor = True
+        '
         'FrmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(774, 475)
+        Me.Controls.Add(Me.BtnWorkingWithColors)
         Me.Controls.Add(Me.BtnComboBoxesAndListBoxes)
         Me.Controls.Add(Me.BtnLooping)
         Me.Controls.Add(Me.BtnStrings)
@@ -100,4 +111,5 @@ Partial Class FrmMainMenu
     Friend WithEvents BtnStrings As Button
     Friend WithEvents BtnLooping As Button
     Friend WithEvents BtnComboBoxesAndListBoxes As Button
+    Friend WithEvents BtnWorkingWithColors As Button
 End Class

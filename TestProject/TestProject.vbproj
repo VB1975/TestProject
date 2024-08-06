@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmColors.Designer.vb">
+      <DependentUpon>FrmColors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmColors.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmComboBoxesAndListBoxes.Designer.vb">
       <DependentUpon>FrmComboBoxesAndListBoxes.vb</DependentUpon>
     </Compile>
@@ -123,6 +129,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmColors.resx">
+      <DependentUpon>FrmColors.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmComboBoxesAndListBoxes.resx">
       <DependentUpon>FrmComboBoxesAndListBoxes.vb</DependentUpon>
     </EmbeddedResource>
