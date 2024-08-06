@@ -8,6 +8,7 @@ A test project to enhance my own learning and understanding of VB.NET.
       * Working With Dates & Times
       * Looping
       * Combo Boxes & List Boxes
+      * Working With Colors
   - Loan Calculator
   - Commission Calculator
   - Word Processor
