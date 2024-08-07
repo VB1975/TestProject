@@ -39,11 +39,13 @@ Partial Class FrmGraphics
         Me.BtnClearCanvas = New System.Windows.Forms.Button()
         Me.PicCanvas = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PnlPenColor = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TxtPenWidth = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.CboPenStyle = New System.Windows.Forms.ComboBox()
+        Me.PnlFillColor = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -92,11 +94,13 @@ Partial Class FrmGraphics
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PnlFillColor)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label9)
         Me.SplitContainer1.Panel1.Controls.Add(Me.CboPenStyle)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label8)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.TextBox1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.TxtPenWidth)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label7)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Panel2)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PnlPenColor)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label6)
         Me.SplitContainer1.Panel1.Controls.Add(Me.BtnClearCanvas)
         Me.SplitContainer1.Panel1.Controls.Add(Me.BtnElipse)
@@ -262,45 +266,45 @@ Partial Class FrmGraphics
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(7, 171)
+        Me.Label6.Location = New System.Drawing.Point(5, 244)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(103, 24)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Pen Color"
         '
-        'Panel2
+        'PnlPenColor
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Black
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(119, 172)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(56, 23)
-        Me.Panel2.TabIndex = 13
+        Me.PnlPenColor.BackColor = System.Drawing.Color.Black
+        Me.PnlPenColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PnlPenColor.Location = New System.Drawing.Point(117, 245)
+        Me.PnlPenColor.Name = "PnlPenColor"
+        Me.PnlPenColor.Size = New System.Drawing.Size(56, 23)
+        Me.PnlPenColor.TabIndex = 13
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(7, 204)
+        Me.Label7.Location = New System.Drawing.Point(7, 175)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(106, 24)
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "Pen Width"
         '
-        'TextBox1
+        'TxtPenWidth
         '
-        Me.TextBox1.Location = New System.Drawing.Point(119, 201)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(56, 29)
-        Me.TextBox1.TabIndex = 15
-        Me.TextBox1.Text = "3"
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TxtPenWidth.Location = New System.Drawing.Point(119, 172)
+        Me.TxtPenWidth.Name = "TxtPenWidth"
+        Me.TxtPenWidth.Size = New System.Drawing.Size(56, 29)
+        Me.TxtPenWidth.TabIndex = 15
+        Me.TxtPenWidth.Text = "3"
+        Me.TxtPenWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(5, 239)
+        Me.Label8.Location = New System.Drawing.Point(5, 210)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(98, 24)
         Me.Label8.TabIndex = 16
@@ -312,10 +316,29 @@ Partial Class FrmGraphics
         Me.CboPenStyle.DropDownWidth = 125
         Me.CboPenStyle.FormattingEnabled = True
         Me.CboPenStyle.Items.AddRange(New Object() {"________________________________________________", "................................................................................", "------------------------------------------------"})
-        Me.CboPenStyle.Location = New System.Drawing.Point(117, 236)
+        Me.CboPenStyle.Location = New System.Drawing.Point(117, 207)
         Me.CboPenStyle.Name = "CboPenStyle"
         Me.CboPenStyle.Size = New System.Drawing.Size(58, 32)
         Me.CboPenStyle.TabIndex = 17
+        '
+        'PnlFillColor
+        '
+        Me.PnlFillColor.BackColor = System.Drawing.Color.Transparent
+        Me.PnlFillColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PnlFillColor.Location = New System.Drawing.Point(117, 274)
+        Me.PnlFillColor.Name = "PnlFillColor"
+        Me.PnlFillColor.Size = New System.Drawing.Size(56, 23)
+        Me.PnlFillColor.TabIndex = 15
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(5, 273)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(94, 24)
+        Me.Label9.TabIndex = 14
+        Me.Label9.Text = "Fill Color"
         '
         'FrmGraphics
         '
@@ -355,10 +378,12 @@ Partial Class FrmGraphics
     Friend WithEvents TxtX1 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents PicCanvas As PictureBox
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents PnlPenColor As Panel
     Friend WithEvents Label6 As Label
     Friend WithEvents CboPenStyle As ComboBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtPenWidth As TextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents PnlFillColor As Panel
+    Friend WithEvents Label9 As Label
 End Class
