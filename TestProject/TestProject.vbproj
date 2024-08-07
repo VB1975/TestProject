@@ -110,6 +110,12 @@
     <Compile Include="FrmStrings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmGraphics.Designer.vb">
+      <DependentUpon>FrmGraphics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGraphics.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ModGlobal.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDatesAndTimes.resx">
       <DependentUpon>FrmDatesAndTimes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGraphics.resx">
+      <DependentUpon>FrmGraphics.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLooping.resx">
       <DependentUpon>FrmLooping.vb</DependentUpon>
