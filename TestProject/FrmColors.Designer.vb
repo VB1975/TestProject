@@ -53,6 +53,7 @@ Partial Class FrmColors
         Me.PnlColorDialogDisplay = New System.Windows.Forms.Panel()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.BtnFlash = New System.Windows.Forms.Button()
         Me.TxtColor2Hex = New System.Windows.Forms.TextBox()
         Me.TxtColor1Hex = New System.Windows.Forms.TextBox()
         Me.PnlColor2 = New System.Windows.Forms.Panel()
@@ -61,7 +62,6 @@ Partial Class FrmColors
         Me.BtnSelectColor1 = New System.Windows.Forms.Button()
         Me.PnlFlashingDisplay = New System.Windows.Forms.Panel()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.BtnFlash = New System.Windows.Forms.Button()
         Me.TimFlash = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -217,6 +217,7 @@ Partial Class FrmColors
         Me.TxtBlueValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxtBlueValue.ForeColor = System.Drawing.Color.Blue
         Me.TxtBlueValue.Location = New System.Drawing.Point(324, 174)
+        Me.TxtBlueValue.MaxLength = 3
         Me.TxtBlueValue.Name = "TxtBlueValue"
         Me.TxtBlueValue.Size = New System.Drawing.Size(81, 29)
         Me.TxtBlueValue.TabIndex = 18
@@ -228,6 +229,7 @@ Partial Class FrmColors
         Me.TxtGreenValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxtGreenValue.ForeColor = System.Drawing.Color.Green
         Me.TxtGreenValue.Location = New System.Drawing.Point(324, 121)
+        Me.TxtGreenValue.MaxLength = 3
         Me.TxtGreenValue.Name = "TxtGreenValue"
         Me.TxtGreenValue.Size = New System.Drawing.Size(81, 29)
         Me.TxtGreenValue.TabIndex = 17
@@ -239,6 +241,7 @@ Partial Class FrmColors
         Me.TxtRedValue.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxtRedValue.ForeColor = System.Drawing.Color.Red
         Me.TxtRedValue.Location = New System.Drawing.Point(324, 66)
+        Me.TxtRedValue.MaxLength = 3
         Me.TxtRedValue.Name = "TxtRedValue"
         Me.TxtRedValue.Size = New System.Drawing.Size(81, 29)
         Me.TxtRedValue.TabIndex = 7
@@ -422,6 +425,18 @@ Partial Class FrmColors
         Me.Panel4.Size = New System.Drawing.Size(577, 202)
         Me.Panel4.TabIndex = 8
         '
+        'BtnFlash
+        '
+        Me.BtnFlash.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnFlash.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnFlash.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnFlash.Location = New System.Drawing.Point(464, 150)
+        Me.BtnFlash.Name = "BtnFlash"
+        Me.BtnFlash.Size = New System.Drawing.Size(108, 29)
+        Me.BtnFlash.TabIndex = 13
+        Me.BtnFlash.Text = "Flash"
+        Me.BtnFlash.UseVisualStyleBackColor = False
+        '
         'TxtColor2Hex
         '
         Me.TxtColor2Hex.Location = New System.Drawing.Point(324, 150)
@@ -495,18 +510,6 @@ Partial Class FrmColors
         Me.Label24.TabIndex = 0
         Me.Label24.Text = "RGB Color Picker"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'BtnFlash
-        '
-        Me.BtnFlash.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.BtnFlash.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnFlash.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnFlash.Location = New System.Drawing.Point(464, 150)
-        Me.BtnFlash.Name = "BtnFlash"
-        Me.BtnFlash.Size = New System.Drawing.Size(108, 29)
-        Me.BtnFlash.TabIndex = 13
-        Me.BtnFlash.Text = "Flash"
-        Me.BtnFlash.UseVisualStyleBackColor = False
         '
         'TimFlash
         '

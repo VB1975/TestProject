@@ -74,24 +74,40 @@ Public Class FrmColors
 
     End Sub
 
+    Private Sub RemoveLeadingZero(Textbox As TextBox)
+
+        If Textbox.Text.Length > 1 AndAlso Strings.Left(Textbox.Text, 1) = 0 Then
+            Textbox.Text = Strings.Right(Textbox.Text, Textbox.Text.Length - 1)
+            Textbox.SelectionStart = Textbox.Text.Length
+        End If
+
+    End Sub
+
+    Private Sub ValidateValues(Textbox As TextBox, RGB As Integer)
+
+        If Textbox.Text.Contains(".") Then
+            Textbox.Text = Replace(Textbox.Text, ".", "")
+            If Textbox.Text = "" Then Textbox.Text = 0
+            Textbox.SelectionStart = Textbox.Text.Length
+            RGB = Val(Textbox.Text)
+        End If
+
+        If Not IsNumeric(Textbox.Text) Then Textbox.Undo() : RGB = Val(Textbox.Text)
+
+    End Sub
+
     Private Sub ValueChange() Handles TxtRedValue.TextChanged, TxtGreenValue.TextChanged, TxtBlueValue.TextChanged
 
-        Dim R As Integer = Val(TxtRedValue.Text), G As Integer = Val(TxtGreenValue.Text), B As Integer = Val(TxtBlueValue.Text)
+        Dim R = Val(TxtRedValue.Text), G = Val(TxtGreenValue.Text), B = Val(TxtBlueValue.Text)
+
+        ValidateValues(TxtRedValue, R) : ValidateValues(TxtGreenValue, G) : ValidateValues(TxtBlueValue, B)
+        RemoveLeadingZero(TxtRedValue) : RemoveLeadingZero(TxtGreenValue) : RemoveLeadingZero(TxtBlueValue)
 
         If R > 255 Then R = 255 : TxtRedValue.Text = 255
         If G > 255 Then G = 255 : TxtGreenValue.Text = 255
         If B > 255 Then B = 255 : TxtBlueValue.Text = 255
 
         TrackRed.Value = R : TrackGreen.Value = G : TrackBlue.Value = B
-
-        If TxtRedValue.Text.Contains(".") Then TxtRedValue.Undo() : R = Val(TxtRedValue.Text) : TrackRed.Value = R
-        If TxtGreenValue.Text.Contains(".") Then TxtGreenValue.Undo() : G = Val(TxtGreenValue.Text) : TrackGreen.Value = G
-        If TxtBlueValue.Text.Contains(".") Then TxtBlueValue.Undo() : B = Val(TxtBlueValue.Text) : TrackBlue.Value = B
-
-        If Not IsNumeric(TxtRedValue.Text) Then TxtRedValue.Undo() : R = Val(TxtRedValue.Text) : TrackRed.Value = R
-        If Not IsNumeric(TxtGreenValue.Text) Then TxtGreenValue.Undo() : G = Val(TxtGreenValue.Text) : TrackGreen.Value = G
-        If Not IsNumeric(TxtBlueValue.Text) Then TxtBlueValue.Undo() : B = Val(TxtBlueValue.Text) : TrackBlue.Value = B
-
         PnlRGBColorDisplay.BackColor = Color.FromArgb(R, G, B)
 
     End Sub
