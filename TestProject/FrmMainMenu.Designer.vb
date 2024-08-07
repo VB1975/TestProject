@@ -28,6 +28,7 @@ Partial Class FrmMainMenu
         Me.BtnLooping = New System.Windows.Forms.Button()
         Me.BtnComboBoxesAndListBoxes = New System.Windows.Forms.Button()
         Me.BtnWorkingWithColors = New System.Windows.Forms.Button()
+        Me.BtnWorkingWithGraphics = New System.Windows.Forms.Button()
         CType(Me.PicMainImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,6 +43,8 @@ Partial Class FrmMainMenu
         '
         'BtnDatesAndTimes
         '
+        Me.BtnDatesAndTimes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnDatesAndTimes.Location = New System.Drawing.Point(315, 76)
         Me.BtnDatesAndTimes.Name = "BtnDatesAndTimes"
         Me.BtnDatesAndTimes.Size = New System.Drawing.Size(447, 58)
@@ -51,6 +54,8 @@ Partial Class FrmMainMenu
         '
         'BtnStrings
         '
+        Me.BtnStrings.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnStrings.Location = New System.Drawing.Point(315, 12)
         Me.BtnStrings.Name = "BtnStrings"
         Me.BtnStrings.Size = New System.Drawing.Size(447, 58)
@@ -60,6 +65,8 @@ Partial Class FrmMainMenu
         '
         'BtnLooping
         '
+        Me.BtnLooping.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnLooping.Location = New System.Drawing.Point(315, 140)
         Me.BtnLooping.Name = "BtnLooping"
         Me.BtnLooping.Size = New System.Drawing.Size(447, 58)
@@ -69,6 +76,8 @@ Partial Class FrmMainMenu
         '
         'BtnComboBoxesAndListBoxes
         '
+        Me.BtnComboBoxesAndListBoxes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnComboBoxesAndListBoxes.Location = New System.Drawing.Point(315, 204)
         Me.BtnComboBoxesAndListBoxes.Name = "BtnComboBoxesAndListBoxes"
         Me.BtnComboBoxesAndListBoxes.Size = New System.Drawing.Size(447, 58)
@@ -78,6 +87,8 @@ Partial Class FrmMainMenu
         '
         'BtnWorkingWithColors
         '
+        Me.BtnWorkingWithColors.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnWorkingWithColors.Location = New System.Drawing.Point(315, 268)
         Me.BtnWorkingWithColors.Name = "BtnWorkingWithColors"
         Me.BtnWorkingWithColors.Size = New System.Drawing.Size(447, 58)
@@ -85,11 +96,23 @@ Partial Class FrmMainMenu
         Me.BtnWorkingWithColors.Text = "Working with Colors"
         Me.BtnWorkingWithColors.UseVisualStyleBackColor = True
         '
+        'BtnWorkingWithGraphics
+        '
+        Me.BtnWorkingWithGraphics.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnWorkingWithGraphics.Location = New System.Drawing.Point(315, 332)
+        Me.BtnWorkingWithGraphics.Name = "BtnWorkingWithGraphics"
+        Me.BtnWorkingWithGraphics.Size = New System.Drawing.Size(447, 58)
+        Me.BtnWorkingWithGraphics.TabIndex = 6
+        Me.BtnWorkingWithGraphics.Text = "Working with Graphics"
+        Me.BtnWorkingWithGraphics.UseVisualStyleBackColor = True
+        '
         'FrmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(774, 475)
+        Me.Controls.Add(Me.BtnWorkingWithGraphics)
         Me.Controls.Add(Me.BtnWorkingWithColors)
         Me.Controls.Add(Me.BtnComboBoxesAndListBoxes)
         Me.Controls.Add(Me.BtnLooping)
@@ -112,4 +135,5 @@ Partial Class FrmMainMenu
     Friend WithEvents BtnLooping As Button
     Friend WithEvents BtnComboBoxesAndListBoxes As Button
     Friend WithEvents BtnWorkingWithColors As Button
+    Friend WithEvents BtnWorkingWithGraphics As Button
 End Class

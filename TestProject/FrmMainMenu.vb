@@ -58,4 +58,11 @@
         OpenForm(frm)
 
     End Sub
+
+    Private Sub BtnWorkingWithGraphics_Click(sender As Object, e As EventArgs) Handles BtnWorkingWithGraphics.Click
+
+        Dim frm As New FrmGraphics
+        OpenForm(frm)
+
+    End Sub
 End Class
