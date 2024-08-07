@@ -25,19 +25,25 @@ Partial Class FrmGraphics
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnLine = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtX1 = New System.Windows.Forms.TextBox()
+        Me.TxtX2 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TxtY1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TxtY2 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.BtnRectangle = New System.Windows.Forms.Button()
+        Me.BtnElipse = New System.Windows.Forms.Button()
+        Me.BtnClearCanvas = New System.Windows.Forms.Button()
         Me.PicCanvas = New System.Windows.Forms.PictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.CboPenStyle = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -78,44 +84,54 @@ Partial Class FrmGraphics
         Me.SplitContainer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SplitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
+        Me.SplitContainer1.IsSplitterFixed = True
         Me.SplitContainer1.Location = New System.Drawing.Point(3, 64)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
         '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button4)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button3)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button2)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.TextBox4)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label5)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.TextBox3)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label4)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.TextBox2)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label3)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.CboPenStyle)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label8)
         Me.SplitContainer1.Panel1.Controls.Add(Me.TextBox1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label7)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Panel2)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label6)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.BtnClearCanvas)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.BtnElipse)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.BtnRectangle)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.TxtY2)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label5)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.TxtY1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label4)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.TxtX2)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label3)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.TxtX1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label2)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.BtnLine)
+        Me.SplitContainer1.Panel1MinSize = 192
         '
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.PicCanvas)
         Me.SplitContainer1.Size = New System.Drawing.Size(1183, 686)
         Me.SplitContainer1.SplitterDistance = 192
-        Me.SplitContainer1.SplitterWidth = 2
+        Me.SplitContainer1.SplitterWidth = 1
         Me.SplitContainer1.TabIndex = 1
         '
-        'Button1
+        'BtnLine
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Location = New System.Drawing.Point(11, 181)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(166, 53)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Line"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BtnLine.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.BtnLine.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnLine.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnLine.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnLine.Location = New System.Drawing.Point(11, 425)
+        Me.BtnLine.Name = "BtnLine"
+        Me.BtnLine.Size = New System.Drawing.Size(166, 53)
+        Me.BtnLine.TabIndex = 0
+        Me.BtnLine.Text = "Line"
+        Me.BtnLine.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -127,23 +143,23 @@ Partial Class FrmGraphics
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "X1:"
         '
-        'TextBox1
+        'TxtX1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(55, 15)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(122, 29)
-        Me.TextBox1.TabIndex = 2
-        Me.TextBox1.Text = "0"
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TxtX1.Location = New System.Drawing.Point(55, 15)
+        Me.TxtX1.Name = "TxtX1"
+        Me.TxtX1.Size = New System.Drawing.Size(122, 29)
+        Me.TxtX1.TabIndex = 2
+        Me.TxtX1.Text = "0"
+        Me.TxtX1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox2
+        'TxtX2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(55, 50)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(122, 29)
-        Me.TextBox2.TabIndex = 4
-        Me.TextBox2.Text = "0"
-        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TxtX2.Location = New System.Drawing.Point(55, 50)
+        Me.TxtX2.Name = "TxtX2"
+        Me.TxtX2.Size = New System.Drawing.Size(122, 29)
+        Me.TxtX2.TabIndex = 4
+        Me.TxtX2.Text = "0"
+        Me.TxtX2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
         '
@@ -155,14 +171,14 @@ Partial Class FrmGraphics
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "X2:"
         '
-        'TextBox3
+        'TxtY1
         '
-        Me.TextBox3.Location = New System.Drawing.Point(55, 85)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(122, 29)
-        Me.TextBox3.TabIndex = 6
-        Me.TextBox3.Text = "0"
-        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TxtY1.Location = New System.Drawing.Point(55, 85)
+        Me.TxtY1.Name = "TxtY1"
+        Me.TxtY1.Size = New System.Drawing.Size(122, 29)
+        Me.TxtY1.TabIndex = 6
+        Me.TxtY1.Text = "0"
+        Me.TxtY1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
         '
@@ -174,14 +190,14 @@ Partial Class FrmGraphics
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Y1:"
         '
-        'TextBox4
+        'TxtY2
         '
-        Me.TextBox4.Location = New System.Drawing.Point(55, 120)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(122, 29)
-        Me.TextBox4.TabIndex = 8
-        Me.TextBox4.Text = "0"
-        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TxtY2.Location = New System.Drawing.Point(55, 120)
+        Me.TxtY2.Name = "TxtY2"
+        Me.TxtY2.Size = New System.Drawing.Size(122, 29)
+        Me.TxtY2.TabIndex = 8
+        Me.TxtY2.Text = "0"
+        Me.TxtY2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
         '
@@ -193,41 +209,44 @@ Partial Class FrmGraphics
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Y2:"
         '
-        'Button2
+        'BtnRectangle
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Location = New System.Drawing.Point(11, 240)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(166, 53)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Rectangle"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.BtnRectangle.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.BtnRectangle.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnRectangle.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnRectangle.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnRectangle.Location = New System.Drawing.Point(11, 484)
+        Me.BtnRectangle.Name = "BtnRectangle"
+        Me.BtnRectangle.Size = New System.Drawing.Size(166, 53)
+        Me.BtnRectangle.TabIndex = 9
+        Me.BtnRectangle.Text = "Rectangle"
+        Me.BtnRectangle.UseVisualStyleBackColor = False
         '
-        'Button3
+        'BtnElipse
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Location = New System.Drawing.Point(11, 299)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(166, 53)
-        Me.Button3.TabIndex = 10
-        Me.Button3.Text = "Elipse"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.BtnElipse.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.BtnElipse.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnElipse.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnElipse.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnElipse.Location = New System.Drawing.Point(11, 543)
+        Me.BtnElipse.Name = "BtnElipse"
+        Me.BtnElipse.Size = New System.Drawing.Size(166, 53)
+        Me.BtnElipse.TabIndex = 10
+        Me.BtnElipse.Text = "Elipse"
+        Me.BtnElipse.UseVisualStyleBackColor = False
         '
-        'Button4
+        'BtnClearCanvas
         '
-        Me.Button4.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button4.Location = New System.Drawing.Point(11, 630)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(166, 53)
-        Me.Button4.TabIndex = 11
-        Me.Button4.Text = "Clear Canvas"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.BtnClearCanvas.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.BtnClearCanvas.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.BtnClearCanvas.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnClearCanvas.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnClearCanvas.Location = New System.Drawing.Point(11, 628)
+        Me.BtnClearCanvas.Name = "BtnClearCanvas"
+        Me.BtnClearCanvas.Size = New System.Drawing.Size(166, 53)
+        Me.BtnClearCanvas.TabIndex = 11
+        Me.BtnClearCanvas.Text = "Clear Canvas"
+        Me.BtnClearCanvas.UseVisualStyleBackColor = False
         '
         'PicCanvas
         '
@@ -235,9 +254,68 @@ Partial Class FrmGraphics
         Me.PicCanvas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PicCanvas.Location = New System.Drawing.Point(0, 0)
         Me.PicCanvas.Name = "PicCanvas"
-        Me.PicCanvas.Size = New System.Drawing.Size(989, 686)
+        Me.PicCanvas.Size = New System.Drawing.Size(988, 684)
         Me.PicCanvas.TabIndex = 0
         Me.PicCanvas.TabStop = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(7, 171)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(103, 24)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "Pen Color"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Black
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Location = New System.Drawing.Point(119, 172)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(56, 23)
+        Me.Panel2.TabIndex = 13
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(7, 204)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(106, 24)
+        Me.Label7.TabIndex = 14
+        Me.Label7.Text = "Pen Width"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(119, 201)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(56, 29)
+        Me.TextBox1.TabIndex = 15
+        Me.TextBox1.Text = "3"
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(5, 239)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(98, 24)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "Pen Style"
+        '
+        'CboPenStyle
+        '
+        Me.CboPenStyle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboPenStyle.DropDownWidth = 125
+        Me.CboPenStyle.FormattingEnabled = True
+        Me.CboPenStyle.Items.AddRange(New Object() {"________________________________________________", "................................................................................", "------------------------------------------------"})
+        Me.CboPenStyle.Location = New System.Drawing.Point(117, 236)
+        Me.CboPenStyle.Name = "CboPenStyle"
+        Me.CboPenStyle.Size = New System.Drawing.Size(58, 32)
+        Me.CboPenStyle.TabIndex = 17
         '
         'FrmGraphics
         '
@@ -264,17 +342,23 @@ Partial Class FrmGraphics
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents SplitContainer1 As SplitContainer
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents BtnLine As Button
+    Friend WithEvents BtnClearCanvas As Button
+    Friend WithEvents BtnElipse As Button
+    Friend WithEvents BtnRectangle As Button
+    Friend WithEvents TxtY2 As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TxtY1 As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtX2 As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtX1 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents PicCanvas As PictureBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents CboPenStyle As ComboBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label7 As Label
 End Class
