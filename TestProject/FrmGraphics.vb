@@ -51,6 +51,15 @@ Public Class FrmGraphics
 
     Private Sub SetGraphicsObject(sender As Object, e As EventArgs) Handles BtnLine.Click, BtnRectangle.Click, BtnElipse.Click
 
+        ' set default coordinates - for testing purposes
+        If sender Is BtnLine Then
+            TxtX1.Text = 50 : TxtX2.Text = 500 : TxtY1.Text = 50 : TxtY2.Text = 50
+        ElseIf sender Is BtnRectangle Then
+            TxtX1.Text = 75 : TxtX2.Text = 250 : TxtY1.Text = 75 : TxtY2.Text = 250
+        ElseIf sender Is BtnElipse Then
+            TxtX1.Text = 50 : TxtX2.Text = 250 : TxtY1.Text = 350 : TxtY2.Text = 250
+        End If
+
         Dim PenColor = PnlPenColor.BackColor
         Dim PenWidth = CboPenWidth.SelectedItem
         Dim objPen As New Pen(PenColor, PenWidth)

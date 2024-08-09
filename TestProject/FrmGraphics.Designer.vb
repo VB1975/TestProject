@@ -24,6 +24,8 @@ Partial Class FrmGraphics
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.LblTransparantFill = New System.Windows.Forms.Label()
+        Me.CboPenWidth = New System.Windows.Forms.ComboBox()
         Me.PnlFillColor = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.CboDashStyle = New System.Windows.Forms.ComboBox()
@@ -45,8 +47,6 @@ Partial Class FrmGraphics
         Me.BtnLine = New System.Windows.Forms.Button()
         Me.PicCanvas = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.CboPenWidth = New System.Windows.Forms.ComboBox()
-        Me.LblTransparantFill = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -111,6 +111,29 @@ Partial Class FrmGraphics
         Me.SplitContainer1.SplitterDistance = 192
         Me.SplitContainer1.SplitterWidth = 1
         Me.SplitContainer1.TabIndex = 1
+        '
+        'LblTransparantFill
+        '
+        Me.LblTransparantFill.AutoSize = True
+        Me.LblTransparantFill.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LblTransparantFill.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTransparantFill.ForeColor = System.Drawing.Color.Blue
+        Me.LblTransparantFill.Location = New System.Drawing.Point(3, 300)
+        Me.LblTransparantFill.Name = "LblTransparantFill"
+        Me.LblTransparantFill.Size = New System.Drawing.Size(135, 16)
+        Me.LblTransparantFill.TabIndex = 19
+        Me.LblTransparantFill.Text = "Transparent Fill Color"
+        '
+        'CboPenWidth
+        '
+        Me.CboPenWidth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboPenWidth.DropDownWidth = 58
+        Me.CboPenWidth.FormattingEnabled = True
+        Me.CboPenWidth.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
+        Me.CboPenWidth.Location = New System.Drawing.Point(117, 172)
+        Me.CboPenWidth.Name = "CboPenWidth"
+        Me.CboPenWidth.Size = New System.Drawing.Size(58, 32)
+        Me.CboPenWidth.TabIndex = 18
         '
         'PnlFillColor
         '
@@ -226,7 +249,7 @@ Partial Class FrmGraphics
         Me.TxtY2.Name = "TxtY2"
         Me.TxtY2.Size = New System.Drawing.Size(122, 29)
         Me.TxtY2.TabIndex = 8
-        Me.TxtY2.Text = "50"
+        Me.TxtY2.Text = "0"
         Me.TxtY2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
@@ -245,7 +268,7 @@ Partial Class FrmGraphics
         Me.TxtY1.Name = "TxtY1"
         Me.TxtY1.Size = New System.Drawing.Size(122, 29)
         Me.TxtY1.TabIndex = 6
-        Me.TxtY1.Text = "50"
+        Me.TxtY1.Text = "0"
         Me.TxtY1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
@@ -264,7 +287,7 @@ Partial Class FrmGraphics
         Me.TxtX2.Name = "TxtX2"
         Me.TxtX2.Size = New System.Drawing.Size(122, 29)
         Me.TxtX2.TabIndex = 4
-        Me.TxtX2.Text = "500"
+        Me.TxtX2.Text = "0"
         Me.TxtX2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
@@ -283,7 +306,7 @@ Partial Class FrmGraphics
         Me.TxtX1.Name = "TxtX1"
         Me.TxtX1.Size = New System.Drawing.Size(122, 29)
         Me.TxtX1.TabIndex = 2
-        Me.TxtX1.Text = "50"
+        Me.TxtX1.Text = "0"
         Me.TxtX1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
@@ -332,29 +355,6 @@ Partial Class FrmGraphics
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Working With Graphics"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'CboPenWidth
-        '
-        Me.CboPenWidth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboPenWidth.DropDownWidth = 58
-        Me.CboPenWidth.FormattingEnabled = True
-        Me.CboPenWidth.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
-        Me.CboPenWidth.Location = New System.Drawing.Point(117, 172)
-        Me.CboPenWidth.Name = "CboPenWidth"
-        Me.CboPenWidth.Size = New System.Drawing.Size(58, 32)
-        Me.CboPenWidth.TabIndex = 18
-        '
-        'LblTransparantFill
-        '
-        Me.LblTransparantFill.AutoSize = True
-        Me.LblTransparantFill.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LblTransparantFill.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTransparantFill.ForeColor = System.Drawing.Color.Blue
-        Me.LblTransparantFill.Location = New System.Drawing.Point(3, 300)
-        Me.LblTransparantFill.Name = "LblTransparantFill"
-        Me.LblTransparantFill.Size = New System.Drawing.Size(135, 16)
-        Me.LblTransparantFill.TabIndex = 19
-        Me.LblTransparantFill.Text = "Transparent Fill Color"
         '
         'FrmGraphics
         '
