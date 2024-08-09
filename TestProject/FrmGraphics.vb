@@ -62,6 +62,7 @@ Public Class FrmGraphics
             TxtX1.Text = 50 : TxtX2.Text = 250 : TxtY1.Text = 350 : TxtY2.Text = 250
         End If
 
+        Dim objGraphicsObject As Graphics = PicCanvas.CreateGraphics()
         Dim PenColor As Color = PnlPenColor.BackColor
         Dim FillColor As Color = PnlFillColor.BackColor
         Dim PenWidth = CboPenWidth.SelectedItem
@@ -71,11 +72,13 @@ Public Class FrmGraphics
         Dim Y1 As Integer = Val(TxtY1.Text), Y2 As Integer = Val(TxtY2.Text)
 
         If sender Is BtnLine Then
-            PicCanvas.CreateGraphics.DrawLine(objPen, X1, Y1, X2, Y2)
+            objGraphicsObject.DrawLine(objPen, X1, Y1, X2, Y2)
         ElseIf sender Is BtnRectangle Then
-            PicCanvas.CreateGraphics.DrawRectangle(objPen, X1, Y1, X2, Y2)
+            objGraphicsObject.FillRectangle(New SolidBrush(FillColor), X1, Y1, X2, Y2)
+            objGraphicsObject.DrawRectangle(objPen, X1, Y1, X2, Y2)
         ElseIf sender Is BtnElipse Then
-            PicCanvas.CreateGraphics.DrawEllipse(objPen, X1, Y1, X2, Y2)
+            objGraphicsObject.FillEllipse(New SolidBrush(FillColor), X1, Y1, X2, Y2)
+            objGraphicsObject.DrawEllipse(objPen, X1, Y1, X2, Y2)
         End If
 
     End Sub
