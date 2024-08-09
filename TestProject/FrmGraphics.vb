@@ -60,7 +60,8 @@ Public Class FrmGraphics
             TxtX1.Text = 50 : TxtX2.Text = 250 : TxtY1.Text = 350 : TxtY2.Text = 250
         End If
 
-        Dim PenColor = PnlPenColor.BackColor
+        Dim PenColor As Color = PnlPenColor.BackColor
+        Dim FillColor As Color = PnlFillColor.BackColor
         Dim PenWidth = CboPenWidth.SelectedItem
         Dim objPen As New Pen(PenColor, PenWidth)
         objPen.DashStyle = DashStyle
@@ -77,4 +78,9 @@ Public Class FrmGraphics
 
     End Sub
 
+    Private Sub BtnClearCanvas_Click(sender As Object, e As EventArgs) Handles BtnClearCanvas.Click
+
+        PicCanvas.Image = Nothing
+
+    End Sub
 End Class
