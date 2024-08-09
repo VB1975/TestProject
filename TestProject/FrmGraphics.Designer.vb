@@ -159,7 +159,7 @@ Partial Class FrmGraphics
         Me.CboDashStyle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboDashStyle.DropDownWidth = 125
         Me.CboDashStyle.FormattingEnabled = True
-        Me.CboDashStyle.Items.AddRange(New Object() {"________________________________________________", "................................................................................", "------------------------------------------------"})
+        Me.CboDashStyle.Items.AddRange(New Object() {"________________________________________________", "................................................................................", "------------------------------------------------", "-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.", "-..-..-..-..-..-..-..-..-..-..-..-..-..-..-..-..-..-..-..-..-..-."})
         Me.CboDashStyle.Location = New System.Drawing.Point(117, 207)
         Me.CboDashStyle.Name = "CboDashStyle"
         Me.CboDashStyle.Size = New System.Drawing.Size(58, 32)

@@ -39,6 +39,8 @@ Public Class FrmGraphics
             Case 0 : DashStyle = Drawing2D.DashStyle.Solid
             Case 1 : DashStyle = Drawing2D.DashStyle.Dot
             Case 2 : DashStyle = Drawing2D.DashStyle.Dash
+            Case 3 : DashStyle = Drawing2D.DashStyle.DashDot
+            Case 4 : DashStyle = Drawing2D.DashStyle.DashDotDot
         End Select
 
     End Sub
