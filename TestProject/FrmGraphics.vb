@@ -48,4 +48,24 @@ Public Class FrmGraphics
         PnlFillColor.BackColor = Color.Transparent
 
     End Sub
+
+    Private Sub SetGraphicsObject(sender As Object, e As EventArgs) Handles BtnLine.Click, BtnRectangle.Click, BtnElipse.Click
+
+        Dim PenColor = PnlPenColor.BackColor
+        Dim PenWidth = CboPenWidth.SelectedItem
+        Dim objPen As New Pen(PenColor, PenWidth)
+        objPen.DashStyle = DashStyle
+        Dim X1 As Integer = Val(TxtX1.Text), X2 As Integer = Val(TxtX2.Text)
+        Dim Y1 As Integer = Val(TxtY1.Text), Y2 As Integer = Val(TxtY2.Text)
+
+        If sender Is BtnLine Then
+            PicCanvas.CreateGraphics.DrawLine(objPen, X1, Y1, X2, Y2)
+        ElseIf sender Is BtnRectangle Then
+            PicCanvas.CreateGraphics.DrawRectangle(objPen, X1, Y1, X2, Y2)
+        ElseIf sender Is BtnElipse Then
+            PicCanvas.CreateGraphics.DrawEllipse(objPen, X1, Y1, X2, Y2)
+        End If
+
+    End Sub
+
 End Class

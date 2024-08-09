@@ -226,7 +226,7 @@ Partial Class FrmGraphics
         Me.TxtY2.Name = "TxtY2"
         Me.TxtY2.Size = New System.Drawing.Size(122, 29)
         Me.TxtY2.TabIndex = 8
-        Me.TxtY2.Text = "0"
+        Me.TxtY2.Text = "50"
         Me.TxtY2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
@@ -245,7 +245,7 @@ Partial Class FrmGraphics
         Me.TxtY1.Name = "TxtY1"
         Me.TxtY1.Size = New System.Drawing.Size(122, 29)
         Me.TxtY1.TabIndex = 6
-        Me.TxtY1.Text = "0"
+        Me.TxtY1.Text = "50"
         Me.TxtY1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
@@ -264,7 +264,7 @@ Partial Class FrmGraphics
         Me.TxtX2.Name = "TxtX2"
         Me.TxtX2.Size = New System.Drawing.Size(122, 29)
         Me.TxtX2.TabIndex = 4
-        Me.TxtX2.Text = "0"
+        Me.TxtX2.Text = "500"
         Me.TxtX2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
@@ -283,7 +283,7 @@ Partial Class FrmGraphics
         Me.TxtX1.Name = "TxtX1"
         Me.TxtX1.Size = New System.Drawing.Size(122, 29)
         Me.TxtX1.TabIndex = 2
-        Me.TxtX1.Text = "0"
+        Me.TxtX1.Text = "50"
         Me.TxtX1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
