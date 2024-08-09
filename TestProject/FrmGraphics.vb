@@ -67,9 +67,10 @@ Public Class FrmGraphics
         Dim FillColor As Color = PnlFillColor.BackColor
         Dim PenWidth = CboPenWidth.SelectedItem
         Dim objPen As New Pen(PenColor, PenWidth)
-        objPen.DashStyle = DashStyle
         Dim X1 As Integer = Val(TxtX1.Text), X2 As Integer = Val(TxtX2.Text)
         Dim Y1 As Integer = Val(TxtY1.Text), Y2 As Integer = Val(TxtY2.Text)
+
+        objPen.DashStyle = DashStyle
 
         If sender Is BtnLine Then
             objGraphicsObject.DrawLine(objPen, X1, Y1, X2, Y2)
