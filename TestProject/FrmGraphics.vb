@@ -4,13 +4,6 @@ Public Class FrmGraphics
 
     Private DashStyle As Integer = Drawing2D.DashStyle.Solid
 
-    Private Sub FrmGraphics_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        CboDashStyle.SelectedIndex = 0
-        CboPenWidth.SelectedItem = "3"
-
-    End Sub
-
     Private Sub SetColor(Panel As Panel)
 
         Dim CD As New ColorDialog
@@ -44,6 +37,14 @@ Public Class FrmGraphics
         End Select
 
     End Sub
+
+    Private Sub FrmGraphics_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        CboDashStyle.SelectedIndex = 0
+        CboPenWidth.SelectedItem = "3"
+
+    End Sub
+
 
     Private Sub LblTransparantFill_Click(sender As Object, e As EventArgs) Handles LblTransparantFill.Click
 
