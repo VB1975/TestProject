@@ -28,7 +28,6 @@ Partial Class FrmGraphics
         Me.Label9 = New System.Windows.Forms.Label()
         Me.CboDashStyle = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TxtPenWidth = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.PnlPenColor = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -46,6 +45,8 @@ Partial Class FrmGraphics
         Me.BtnLine = New System.Windows.Forms.Button()
         Me.PicCanvas = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.CboPenWidth = New System.Windows.Forms.ComboBox()
+        Me.LblTransparantFill = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -80,11 +81,12 @@ Partial Class FrmGraphics
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.LblTransparantFill)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.CboPenWidth)
         Me.SplitContainer1.Panel1.Controls.Add(Me.PnlFillColor)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label9)
         Me.SplitContainer1.Panel1.Controls.Add(Me.CboDashStyle)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label8)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.TxtPenWidth)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label7)
         Me.SplitContainer1.Panel1.Controls.Add(Me.PnlPenColor)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label6)
@@ -149,15 +151,6 @@ Partial Class FrmGraphics
         Me.Label8.Size = New System.Drawing.Size(108, 24)
         Me.Label8.TabIndex = 16
         Me.Label8.Text = "Dash Style"
-        '
-        'TxtPenWidth
-        '
-        Me.TxtPenWidth.Location = New System.Drawing.Point(119, 172)
-        Me.TxtPenWidth.Name = "TxtPenWidth"
-        Me.TxtPenWidth.Size = New System.Drawing.Size(56, 29)
-        Me.TxtPenWidth.TabIndex = 15
-        Me.TxtPenWidth.Text = "3"
-        Me.TxtPenWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label7
         '
@@ -340,6 +333,29 @@ Partial Class FrmGraphics
         Me.Label1.Text = "Working With Graphics"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'CboPenWidth
+        '
+        Me.CboPenWidth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboPenWidth.DropDownWidth = 58
+        Me.CboPenWidth.FormattingEnabled = True
+        Me.CboPenWidth.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
+        Me.CboPenWidth.Location = New System.Drawing.Point(117, 172)
+        Me.CboPenWidth.Name = "CboPenWidth"
+        Me.CboPenWidth.Size = New System.Drawing.Size(58, 32)
+        Me.CboPenWidth.TabIndex = 18
+        '
+        'LblTransparantFill
+        '
+        Me.LblTransparantFill.AutoSize = True
+        Me.LblTransparantFill.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LblTransparantFill.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTransparantFill.ForeColor = System.Drawing.Color.Blue
+        Me.LblTransparantFill.Location = New System.Drawing.Point(3, 300)
+        Me.LblTransparantFill.Name = "LblTransparantFill"
+        Me.LblTransparantFill.Size = New System.Drawing.Size(135, 16)
+        Me.LblTransparantFill.TabIndex = 19
+        Me.LblTransparantFill.Text = "Transparent Fill Color"
+        '
         'FrmGraphics
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
@@ -382,8 +398,9 @@ Partial Class FrmGraphics
     Friend WithEvents Label6 As Label
     Friend WithEvents CboDashStyle As ComboBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TxtPenWidth As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents PnlFillColor As Panel
     Friend WithEvents Label9 As Label
+    Friend WithEvents CboPenWidth As ComboBox
+    Friend WithEvents LblTransparantFill As Label
 End Class

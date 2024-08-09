@@ -7,6 +7,7 @@ Public Class FrmGraphics
     Private Sub FrmGraphics_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         CboDashStyle.SelectedIndex = 0
+        CboPenWidth.SelectedItem = "3"
 
     End Sub
 
@@ -39,6 +40,12 @@ Public Class FrmGraphics
             Case 1 : DashStyle = Drawing2D.DashStyle.Dot
             Case 2 : DashStyle = Drawing2D.DashStyle.Dash
         End Select
+
+    End Sub
+
+    Private Sub LblTransparantFill_Click(sender As Object, e As EventArgs) Handles LblTransparantFill.Click
+
+        PnlFillColor.BackColor = Color.Transparent
 
     End Sub
 End Class
